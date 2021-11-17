@@ -74,10 +74,6 @@ a {
   text-decoration: none;
 }
 
-.wrap {
-  background-color: #FFCC00;
-}
-
 .container {
   max-width: 1030px;
   margin: 0 auto;
@@ -110,12 +106,12 @@ a {
   text-align: center;
 }
 
-.ps-35 {
-  padding-right: 35px;
+.background-primary {
+  background-color: #FFCC00;
 }
 
-.mb-10 {
-  margin-bottom: 10px;
+.ps-35 {
+  padding-right: 35px;
 }
 
 .fz-12 {
@@ -159,6 +155,9 @@ nav {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 1px;
+  color: white;
+  font-size: 35px;
+  padding: 7px 25px;
 }
 
 .nav-selectArea {
@@ -169,5 +168,9 @@ nav {
 
 .nav-links a {
   color: white;
+}
+
+.nav-links a i {
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=all.css.map */
