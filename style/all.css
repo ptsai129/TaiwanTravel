@@ -116,6 +116,14 @@ a {
   padding-right: 35px;
 }
 
+.border-0 {
+  border: none;
+}
+
+.rounded-1 {
+  border-radius: 20px;
+}
+
 .fz-12 {
   font-size: 12px;
 }
@@ -126,6 +134,15 @@ a {
 
 nav {
   height: 109px;
+}
+
+@media (max-width: 568px) {
+  nav {
+    padding-right: 16px;
+    padding-left: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .nav-title h1 {
@@ -141,6 +158,17 @@ nav {
   text-indent: 101%;
   overflow: hidden;
   white-space: nowrap;
+}
+
+@media (max-width: 568px) {
+  .nav-title {
+    padding-right: 16px;
+    padding-left: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 102px;
+  }
 }
 
 .nav-searchBar input {
@@ -162,10 +190,50 @@ nav {
   padding: 7px 25px;
 }
 
+@media (max-width: 768px) {
+  .nav-searchBar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 568px) {
+  .nav-searchBar {
+    padding-right: 16px;
+    padding-left: 16px;
+    display: none;
+  }
+}
+
 .nav-selectArea {
   border: none;
   border-left: 1px solid #FF8800;
   color: #FF8800;
+}
+
+@media (max-width: 1280px) {
+  .nav-mobile-searchBar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-mobile-searchBar {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .nav-mobile-searchBar {
+    padding-right: 16px;
+    padding-left: 16px;
+    display: block;
+  }
+}
+
+.nav-mobile-searchBar input {
+  padding: 8px 84px;
 }
 
 .nav-links a {
@@ -174,5 +242,47 @@ nav {
 
 .nav-links a i {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (max-width: 568px) {
+  .nav-links {
+    padding-right: 16px;
+    padding-left: 16px;
+    display: none;
+  }
+}
+
+.nav-mobile-links {
+  padding-left: 74px;
+}
+
+.nav-mobile-links a {
+  color: white;
+}
+
+.nav-mobile-links a i {
+  font-size: 18px;
+}
+
+@media (max-width: 1280px) {
+  .nav-mobile-links {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  .nav-mobile-links {
+    padding-right: 16px;
+    padding-left: 16px;
+    display: block;
+  }
 }
 /*# sourceMappingURL=all.css.map */

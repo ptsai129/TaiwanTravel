@@ -3,8 +3,12 @@
 @import "_mixin";
 @import "_utils";
 
-
-
+.border-0{
+    border: none;
+}
+.rounded-1{
+    border-radius:20px;
+}
 
 .fz-12{
     font-size: 12px;
@@ -17,12 +21,16 @@
 
 nav{
     height:109px;
+    @include mobile{
+        flex-wrap: wrap;
+    }
 }
+
 .nav-title{
     h1{
         float:left;
         a{
-            background-image: url(img/taiwango-logo.png);
+            background-image: url(/img/taiwango-logo.png);
             background-position: center;
             height:41px;
             width:149px;
@@ -32,9 +40,13 @@ nav{
             white-space: nowrap;
         }
     }
-
-
+    @include mobile{
+        display: flex;
+        padding-left: 102px;
+       
+    }
 }
+
 .nav-searchBar{
     input{
         padding-top: 15px;
@@ -54,6 +66,12 @@ nav{
         padding: 7px 25px;
   
         }
+        @include pad{
+            display: flex;
+        }
+        @include mobile{
+            display: none;
+        }
     }
 
 
@@ -63,11 +81,55 @@ nav{
     color:#FF8800; 
 }
 
+
+.nav-mobile-searchBar{
+    @include desktop-below{
+        display: none;
+    }
+    @include pad{
+        display: none;
+    }
+    @include mobile{
+        display: block;
+    }
+    input{
+        padding:8px 84px;
+    }
+    
+}
+
 .nav-links{
     a{
     color:white;
     i{
         margin-bottom: 10px;
     }
+}
+    
+    @include pad{
+        display: flex;
     }
+    @include mobile{
+        display: none;
+    }
+}
+
+.nav-mobile-links{
+    padding-left:74px;
+    a{
+        color:white;
+        i{
+            font-size: 18px;
+        }
+    }
+    
+
+    @include desktop-below{
+        display: none;
+    }
+
+    @include mobile{
+        display: block;
+    }
+
 }
