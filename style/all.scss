@@ -6,7 +6,11 @@
 .border-0{
     border: none;
 }
+
 .rounded-1{
+    border-radius:10px;
+}
+.rounded-2{
     border-radius:20px;
 }
 
@@ -132,4 +136,32 @@ nav{
         display: block;
     }
 
+}
+
+.latestInfo{
+    display: flex;
+}
+.s1{
+    width:100%;
+    height:106px;
+    .swiper-wrapper{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        height:106px;
+        .swiper-slide{
+            width:auto;
+            height:auto;
+            margin-right: 30px;
+        }
+    }
+}
+
+.latestInfo-item{
+    padding:12.5px 10px;
+    background-color:#FF8800;
+    color:white; 
+    font-size: 18px;
+        i{
+            font-size: 28px;
+        }
 }

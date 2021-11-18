@@ -4,16 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style/all.css" />
     <title>Taiwan Go</title>
   </head>
@@ -42,13 +35,33 @@
          <a href="#" class="ps-35 fz-12"><i class="fab fa-facebook fz-30"></i> <br/>Facebook</a>
          <a href="#" class="fz-12"><i class="fas fa-globe fz-30"></i><br />語言</a>
         </div>
-
         <div class="nav-mobile-searchBar ">
-          <input type="text" class="rounded-1 border-0" placeholder="你想去哪裡？台南景點"/>
+          <input type="text" class="rounded-2 border-0" placeholder="你想去哪裡？台南景點"/>
         </div>
       </nav>
     </div>
+    <div class="latestInfo">
+    <div class="swiper s1">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>活動公告詳請 點擊官網</a></div>
+    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>卡利夢梅之宴 暫停辦理</a></div>
+    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>三仙台迎曙光 取消活動</a></div>
+    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>嘉義布袋 高跟鞋教堂維修中</a></div>
+    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>池上稻浪馬拉松 熱烈報名中</a></div>
+   </div>
+  </div>
 
 
+  
+
+  <script>
+    const swiper1 = new Swiper('.s1', {
+   // Optional parameters
+     direction: 'vertical',
+     loop: true,
+    });
+  </script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
   </body>
 </html>
