@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style/all.css" />
     <title>Taiwan Go</title>
   </head>
@@ -40,28 +40,45 @@
         </div>
       </nav>
     </div>
-    <div class="latestInfo">
-    <div class="swiper s1">
-    <div class="swiper-wrapper">
-    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>活動公告詳請 點擊官網</a></div>
-    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>卡利夢梅之宴 暫停辦理</a></div>
-    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>三仙台迎曙光 取消活動</a></div>
-    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>嘉義布袋 高跟鞋教堂維修中</a></div>
-    <div class="swiper-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>池上稻浪馬拉松 熱烈報名中</a></div>
+
+    <div class="swiper mySwiper latestInfo">
+    <div class="swiper-wrapper latestInfo-wrapper">
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>活動公告詳請 點擊官網</a></div>
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>卡利夢梅之宴 暫停辦理</a></div>
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>三仙台迎曙光 取消活動</a></div>
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>嘉義高跟鞋教堂 維修中</a></div>
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>池上稻浪馬拉松 報名中</a></div>
    </div>
-  </div>
+   </div>
+    <div class="swiper s2">
+    <div class="swiper-wrapper banner-wrapper">
+        <div class="swiper-slide swiper-img pe-20"><img src="/img/banner-kaohsiung.jfif" alt="kaohsiung" /></div>
+        <div class="swiper-slide swiper-img pe-20"><img src="/img/banner-tainan.jfif" alt="tainan" /></div>
+        <div class="swiper-slide swiper-img pe-20"><img src="/img/banner-east.png" alt="Xiaoyeliu"/></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
 
 
-  
 
-  <script>
-    const swiper1 = new Swiper('.s1', {
-   // Optional parameters
-     direction: 'vertical',
-     loop: true,
-    });
-  </script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+
+    const swiper2 = new Swiper('.s2', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+  });
+  var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
   
+  </script>
   </body>
 </html>

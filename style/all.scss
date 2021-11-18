@@ -138,23 +138,14 @@ nav{
 
 }
 
+
 .latestInfo{
-    display: flex;
-}
-.s1{
     width:100%;
-    height:106px;
-    .swiper-wrapper{
+    .latestInfo-wrapper{
         margin-top: 30px;
         margin-bottom: 30px;
-        height:106px;
-        .swiper-slide{
-            width:auto;
-            height:auto;
-            margin-right: 30px;
         }
     }
-}
 
 .latestInfo-item{
     padding:12.5px 10px;
@@ -163,5 +154,29 @@ nav{
     font-size: 18px;
         i{
             font-size: 28px;
+            padding-right: 20px;
         }
+
+    @include mobile{
+        padding:8px;
+        font-size: 12px;
+        i{
+            font-size: 18px;
+        }
+    }
+}
+
+
+.banner-wrapper{
+    height:400px;
+    width:1000px;
+.swiper-img{
+    img{
+        border-radius:15px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
 }
