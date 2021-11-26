@@ -2,6 +2,9 @@
     display: flex;
 }
 
+.flex-column{
+    flex-direction: column;
+}
 .justify-content-around{
     justify-content: space-around;
 }
@@ -18,7 +21,7 @@
 }
 
 .background-primary{
-    background-color:#FFCC00;
+    background-color:$primary;
 }
 .ps-35{
     padding-right: 35px;
@@ -26,4 +29,16 @@
 
 .pe-20{
     padding-left: 20px;
+}
+
+
+.border-0{
+    border: none;
+}
+
+.rounded-1{
+    border-radius:10px;
+}
+.rounded-2{
+    border-radius:20px;
 }

@@ -3,16 +3,7 @@
 @import "_mixin";
 @import "_utils";
 
-.border-0{
-    border: none;
-}
 
-.rounded-1{
-    border-radius:10px;
-}
-.rounded-2{
-    border-radius:20px;
-}
 
 .fz-12{
     font-size: 12px;
@@ -61,11 +52,11 @@ nav{
         border:1px;
     }
     button{
-        background-color:#00C2BA; 
+        background-color:$success;
         border-top-right-radius: 20px; 
         border-bottom-right-radius:20px;
         border:1px;
-        color:white;
+        color: $light;
         font-size: 35px;
         padding: 7px 25px;
   
@@ -81,8 +72,8 @@ nav{
 
 .nav-selectArea{
     border:none;
-    border-left:1px solid #FF8800; 
-    color:#FF8800; 
+    border-left:1px solid $secondary;
+    color:$secondary;
 }
 
 
@@ -104,7 +95,7 @@ nav{
 
 .nav-links{
     a{
-    color:white;
+    color:$light;
     i{
         margin-bottom: 10px;
     }
@@ -121,7 +112,7 @@ nav{
 .nav-mobile-links{
     padding-left:74px;
     a{
-        color:white;
+        color:$light;
         i{
             font-size: 18px;
         }
@@ -149,8 +140,8 @@ nav{
 
 .latestInfo-item{
     padding:12.5px 10px;
-    background-color:#FF8800;
-    color:white; 
+    background-color:$secondary;
+    color:$light;
     font-size: 18px;
         i{
             font-size: 28px;
@@ -178,5 +169,18 @@ nav{
         object-fit: cover;
     }
 }
+
+}
+
+.packageTour-Kaohsiung{
+    margin-right: 40px;
+    .kaohsiung-txt{
+        background-color: $primary;
+    }
+}
+
+
+.taipei-txt{
+    background-color: $primary;
 
 }

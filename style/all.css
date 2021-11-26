@@ -87,6 +87,13 @@ a {
   display: flex;
 }
 
+.flex-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .justify-content-around {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -193,7 +200,7 @@ nav {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 1px;
-  color: white;
+  color: #ffff;
   font-size: 35px;
   padding: 7px 25px;
 }
@@ -245,7 +252,7 @@ nav {
 }
 
 .nav-links a {
-  color: white;
+  color: #ffff;
 }
 
 .nav-links a i {
@@ -273,7 +280,7 @@ nav {
 }
 
 .nav-mobile-links a {
-  color: white;
+  color: #ffff;
 }
 
 .nav-mobile-links a i {
@@ -306,7 +313,7 @@ nav {
 .latestInfo-item {
   padding: 12.5px 10px;
   background-color: #FF8800;
-  color: white;
+  color: #ffff;
   font-size: 18px;
 }
 
@@ -338,5 +345,17 @@ nav {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.packageTour-Kaohsiung {
+  margin-right: 40px;
+}
+
+.packageTour-Kaohsiung .kaohsiung-txt {
+  background-color: #FFCC00;
+}
+
+.taipei-txt {
+  background-color: #FFCC00;
 }
 /*# sourceMappingURL=all.css.map */
