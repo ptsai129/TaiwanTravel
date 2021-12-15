@@ -169,18 +169,46 @@ nav{
         object-fit: cover;
     }
 }
-
+}
+.packageTour{
+    p{
+        margin-top: 96px;
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+}
+.packageTour-items{
+    width:100%;
 }
 
 .packageTour-Kaohsiung{
-    margin-right: 40px;
-    .kaohsiung-txt{
-        background-color: $primary;
+   margin-right:40px;
+}
+.kaohsiung-txt , .taipei-txt{
+    background-color: $primary;
+    h2{
+        margin-top: 16px;
+        margin-bottom: 45px;
+        font-weight: 700;
+        font-size: 28px;
+    }
+    a{  
+        display:block;
+        text-align:right;
+        margin-bottom: 26px;
+        padding-right: 26px;
+        color:black;
     }
 }
 
-
-.taipei-txt{
-    background-color: $primary;
-
+.kaohsiungTrip , .taipeiTrip{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height:270px;
+    width:424px;
+    
+    @include mobile{
+        height:237px;
+    }
 }

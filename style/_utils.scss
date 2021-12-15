@@ -1,6 +1,9 @@
 .d-flex{
     display: flex;
 }
+.flex-wrap{
+    flex-wrap:wrap;
+}
 
 .flex-column{
     flex-direction: column;
@@ -20,6 +23,9 @@
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
 .background-primary{
     background-color:$primary;
 }

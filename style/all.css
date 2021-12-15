@@ -76,8 +76,8 @@ a {
 
 .container {
   max-width: 1280px;
-  padding-left: 125px;
-  padding-right: 125px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 }
 
@@ -85,6 +85,11 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .flex-column {
@@ -113,6 +118,10 @@ a {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .background-primary {
@@ -347,15 +356,52 @@ nav {
      object-fit: cover;
 }
 
+.packageTour p {
+  margin-top: 96px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.packageTour-items {
+  width: 100%;
+}
+
 .packageTour-Kaohsiung {
   margin-right: 40px;
 }
 
-.packageTour-Kaohsiung .kaohsiung-txt {
+.kaohsiung-txt, .taipei-txt {
   background-color: #FFCC00;
 }
 
-.taipei-txt {
-  background-color: #FFCC00;
+.kaohsiung-txt h2, .taipei-txt h2 {
+  margin-top: 16px;
+  margin-bottom: 45px;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.kaohsiung-txt a, .taipei-txt a {
+  display: block;
+  text-align: right;
+  margin-bottom: 26px;
+  padding-right: 26px;
+  color: black;
+}
+
+.kaohsiungTrip, .taipeiTrip {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 270px;
+  width: 424px;
+}
+
+@media (max-width: 568px) {
+  .kaohsiungTrip, .taipeiTrip {
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 237px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
