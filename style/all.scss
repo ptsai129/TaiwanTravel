@@ -35,11 +35,11 @@ nav{
             white-space: nowrap;
         }
     }
-    @include mobile{
+    @include pad{
         display: flex;
-        padding-left: 102px;
        
     }
+
 }
 
 .nav-searchBar{
@@ -78,19 +78,22 @@ nav{
 
 
 .nav-mobile-searchBar{
+    display: none;
     @include desktop-below{
         display: none;
     }
-    @include pad{
-        display: none;
-    }
+
     @include mobile{
         display: block;
-    }
-    input{
-        padding:8px 84px;
-    }
     
+    }
+   
+    input{
+         padding:8px 50px;
+         width:100%;
+         text-align: center;
+    }
+
 }
 
 .nav-links{
@@ -110,6 +113,16 @@ nav{
 }
 
 .nav-mobile-links{
+    display: none;
+    @include pad{
+        display: none;
+    }
+    @include desktop-below{
+        display: none;
+    }
+    @include mobile{
+        display: block;
+    }
     padding-left:74px;
     a{
         color:$light;
@@ -171,6 +184,10 @@ nav{
 }
 }
 .packageTour{
+    padding: 0px 127px;
+    @include mobile{
+        padding: 0px 16px;
+    }   
     p{
         margin-top: 96px;
         margin-bottom: 30px;
@@ -183,15 +200,22 @@ nav{
 }
 
 .packageTour-Kaohsiung{
-   margin-right:40px;
+    margin-right:40px;
+   @include desktop-below{
+    margin-right:0; 
+    margin-bottom:40px;
+  }
 }
 .kaohsiung-txt , .taipei-txt{
     background-color: $primary;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     h2{
         margin-top: 16px;
         margin-bottom: 45px;
         font-weight: 700;
         font-size: 28px;
+        font-family: 'Noto Sans TC',sans-serif;
     }
     a{  
         display:block;
@@ -207,8 +231,26 @@ nav{
     border-top-right-radius: 15px;
     height:270px;
     width:424px;
+    object-fit: cover;
     
     @include mobile{
         height:237px;
+        width:343px;
+        padding:0;
     }
 }
+
+
+.popularAttraction{
+    padding: 0px 127px;
+    @include mobile{
+        padding: 0px 16px;
+    }   
+        h2{
+            margin-top: 92px;
+            font-size: 28px;
+            font-weight:500;
+            font-family: 'Noto Sans TC',sans-serif;
+        }
+}
+

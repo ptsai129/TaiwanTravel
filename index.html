@@ -61,7 +61,7 @@
     <div class="packageTour container">
       <p class="text-center">從台灣發現更多美好 <br>
         兩大城市 教你拍起 EMO 圖！</p>
-      <div class="packageTour-items d-flex justify-content-center">
+      <div class="packageTour-items d-flex justify-content-center flex-wrap">
         <div class="packageTour-Kaohsiung d-flex flex-column">
          <img class="kaohsiungTrip"src="/img/trip-kaohsiung.jfif" alt="kaohsiungPhoto">
           <div class="kaohsiung-txt">
@@ -78,6 +78,10 @@
         </div>  
       </div>
     </div>
+    <div class="popularAttraction container">
+    <h2>人氣景點探索</h2>
+
+    </div>
 
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -90,9 +94,14 @@
 
   });
   var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 2,
-        spaceBetween: 10,
+        slidesPerView: 1.5,
+        spaceBetween: 5,
         breakpoints:{
+             // when window width is >= 320px
+    320: {
+      slidesPerView: 1.7,
+      spaceBetween: 10
+    },
           //when window width is >576px
           576: {
       slidesPerView: 2.2,
