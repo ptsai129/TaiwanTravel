@@ -48,6 +48,7 @@
     <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>三仙台迎曙光 取消活動</a></div>
     <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>嘉義高跟鞋教堂 維修中</a></div>
     <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>池上稻浪馬拉松 報名中</a></div>
+    <div class="swiper-slide  latestInfo-slide"><a href="#" class="latestInfo-item rounded-1"><i class="fas fa-exclamation-triangle"></i>澎湖國際花火節 半價優惠</a></div>
    </div>
    </div>
     <div class="swiper s2">
@@ -80,50 +81,41 @@
     </div>
     <div class="popularAttraction container">
     <h2>人氣景點探索</h2>
-
+      <!-- Slider main container -->
+      <div class="swiper atttractionSwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper mt-35">
+          <!-- Slides -->     
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./img/exploreHualien.png"  alt="花蓮星巴克貨櫃屋" class="explore-img">
+                <h5 class="text-center mt-18">花蓮星巴克貨櫃屋</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./img/explorePingtung.png"  alt="屏東台灣最南點" class="explore-img">
+                <h5 class="text-center mt-18">屏東 台灣最南點</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./img/exploreTaitung.png"  alt="台東鹿野熱氣球" class="explore-img">
+                <h5 class="text-center mt-18">台東鹿野熱氣球</h5>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card">
+                <img src="./img/exploreYilan.png"  alt="宜蘭南澳神秘海灘" class="explore-img">
+                <h5 class="text-center mt-18">宜蘭南澳神秘海灘</h5>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
 
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script>
-
-    const swiper2 = new Swiper('.s2', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-
-  });
-  var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.5,
-        spaceBetween: 5,
-        breakpoints:{
-             // when window width is >= 320px
-    320: {
-      slidesPerView: 1.7,
-      spaceBetween: 10
-    },
-          //when window width is >576px
-          576: {
-      slidesPerView: 2.2,
-      spaceBetween: 15
-    },
-    // when window width is >= 768px
-    768: {
-      slidesPerView: 2.5,
-      spaceBetween: 5
-    },
-    // when window width is >= 996px
-    996: {
-      slidesPerView: 3.5,
-      spaceBetween: 30
-    }
-     },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-  
-  </script>
+  <script src="all.js"></script>
   </body>
 </html>

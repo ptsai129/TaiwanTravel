@@ -135,6 +135,14 @@ a {
   padding-left: 20px;
 }
 
+.mt-18 {
+  margin-top: 18px;
+}
+
+.mt-35 {
+  margin-top: 35px;
+}
+
 .border-0 {
   border: none;
 }
@@ -426,5 +434,20 @@ nav {
   font-size: 28px;
   font-weight: 500;
   font-family: 'Noto Sans TC',sans-serif;
+}
+
+.explore-img {
+  border-radius: 15px;
+  height: 231px;
+  width: 316px;
+}
+
+@media (max-width: 767px) {
+  .explore-img {
+    height: 138px;
+    width: 210px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=all.css.map */

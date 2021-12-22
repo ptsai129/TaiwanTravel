@@ -187,6 +187,8 @@ nav{
     }
 }
 }
+
+
 .packageTour{
       
     p{
@@ -232,7 +234,7 @@ nav{
     height:270px;
     width:424px;
     object-fit: cover;
-    
+
     @include pad{
         height:237px;
         width:343px;
@@ -251,3 +253,15 @@ nav{
         }
 }
 
+
+
+.explore-img {
+      border-radius: 15px;
+      height:231px;
+      width:316px;
+     @include mobile{
+            height:138px;
+            width:210px;
+            object-fit: cover;
+     }
+    }
