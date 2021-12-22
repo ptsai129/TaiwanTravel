@@ -1,6 +1,6 @@
 @import "_variables";
-@import "_base";
 @import "_mixin";
+@import "_base";
 @import "_utils";
 
 
@@ -185,6 +185,9 @@ nav{
 }
 .packageTour{
     padding: 0px 127px;
+    @include desktop-below{
+        padding: 0 80px;
+    }
     @include mobile{
         padding: 0px 16px;
     }   
@@ -201,7 +204,7 @@ nav{
 
 .packageTour-Kaohsiung{
     margin-right:40px;
-   @include desktop-below{
+   @include pad{
     margin-right:0; 
     margin-bottom:40px;
   }
