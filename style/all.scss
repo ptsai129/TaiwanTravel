@@ -16,8 +16,14 @@
 
 nav{
     height:109px;
+    @include pad{
+        justify-content: flex-start;
+        
+    }
+
     @include mobile{
         flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -25,7 +31,7 @@ nav{
     h1{
         float:left;
         a{
-            background-image: url(./img/taiwango-logo.png);
+            background-image: url(/img/taiwango-logo.png);
             background-position: center;
             height:41px;
             width:149px;
@@ -79,7 +85,7 @@ nav{
 
 .nav-mobile-searchBar{
     display: none;
-    @include desktop-below{
+    @include pad{
         display: none;
     }
 
@@ -117,9 +123,7 @@ nav{
     @include pad{
         display: none;
     }
-    @include desktop-below{
-        display: none;
-    }
+  
     @include mobile{
         display: block;
     }
@@ -132,7 +136,7 @@ nav{
     }
     
 
-    @include desktop-below{
+    @include pad{
         display: none;
     }
 
@@ -184,13 +188,7 @@ nav{
 }
 }
 .packageTour{
-    padding: 0px 127px;
-    @include desktop-below{
-        padding: 0 80px;
-    }
-    @include mobile{
-        padding: 0px 16px;
-    }   
+      
     p{
         margin-top: 96px;
         margin-bottom: 30px;
@@ -198,17 +196,15 @@ nav{
         font-size: 30px;
     }
 }
-.packageTour-items{
-    width:100%;
-}
+
 
 .packageTour-Kaohsiung{
-    margin-bottom:40px;
-    margin-right:40px;
-   @include mobile{
-    margin-right:0; 
-    
-  }
+   margin-right:40px;
+    @include mobile{
+    margin-right: 0px;
+    margin-bottom: 40px;
+    }
+ 
 }
 .kaohsiung-txt , .taipei-txt{
     background-color: $primary;
@@ -237,7 +233,7 @@ nav{
     width:424px;
     object-fit: cover;
     
-    @include mobile{
+    @include pad{
         height:237px;
         width:343px;
         padding:0;
@@ -246,10 +242,7 @@ nav{
 
 
 .popularAttraction{
-    padding: 0px 127px;
-    @include mobile{
-        padding: 0px 16px;
-    }   
+   
         h2{
             margin-top: 92px;
             font-size: 28px;

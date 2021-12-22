@@ -75,7 +75,7 @@ a {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1026px;
   padding: 0px 16px;
   margin: 0 auto;
 }
@@ -159,12 +159,21 @@ nav {
   height: 109px;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 992px) {
   nav {
-    padding-right: 16px;
-    padding-left: 16px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -183,7 +192,7 @@ nav {
   white-space: nowrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -210,7 +219,7 @@ nav {
   padding: 7px 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-searchBar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -218,10 +227,8 @@ nav {
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767px) {
   .nav-searchBar {
-    padding-right: 16px;
-    padding-left: 16px;
     display: none;
   }
 }
@@ -236,16 +243,14 @@ nav {
   display: none;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .nav-mobile-searchBar {
     display: none;
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767px) {
   .nav-mobile-searchBar {
-    padding-right: 16px;
-    padding-left: 16px;
     display: block;
   }
 }
@@ -264,7 +269,7 @@ nav {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -272,10 +277,8 @@ nav {
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767px) {
   .nav-links {
-    padding-right: 16px;
-    padding-left: 16px;
     display: none;
   }
 }
@@ -285,22 +288,14 @@ nav {
   padding-left: 74px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .nav-mobile-links {
     display: none;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
   .nav-mobile-links {
-    display: none;
-  }
-}
-
-@media (max-width: 568px) {
-  .nav-mobile-links {
-    padding-right: 16px;
-    padding-left: 16px;
     display: block;
   }
 }
@@ -313,16 +308,14 @@ nav {
   font-size: 18px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   .nav-mobile-links {
     display: none;
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767px) {
   .nav-mobile-links {
-    padding-right: 16px;
-    padding-left: 16px;
     display: block;
   }
 }
@@ -348,10 +341,8 @@ nav {
   padding-right: 20px;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 767px) {
   .latestInfo-item {
-    padding-right: 16px;
-    padding-left: 16px;
     padding: 8px;
     font-size: 12px;
   }
@@ -373,18 +364,6 @@ nav {
      object-fit: cover;
 }
 
-.packageTour {
-  padding: 0px 127px;
-}
-
-@media (max-width: 568px) {
-  .packageTour {
-    padding-right: 16px;
-    padding-left: 16px;
-    padding: 0px 16px;
-  }
-}
-
 .packageTour p {
   margin-top: 96px;
   margin-bottom: 30px;
@@ -392,17 +371,13 @@ nav {
   font-size: 30px;
 }
 
-.packageTour-items {
-  width: 100%;
-}
-
 .packageTour-Kaohsiung {
   margin-right: 40px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 767px) {
   .packageTour-Kaohsiung {
-    margin-right: 0;
+    margin-right: 0px;
     margin-bottom: 40px;
   }
 }
@@ -438,25 +413,11 @@ nav {
      object-fit: cover;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 992px) {
   .kaohsiungTrip, .taipeiTrip {
-    padding-right: 16px;
-    padding-left: 16px;
     height: 237px;
     width: 343px;
     padding: 0;
-  }
-}
-
-.popularAttraction {
-  padding: 0px 127px;
-}
-
-@media (max-width: 568px) {
-  .popularAttraction {
-    padding-right: 16px;
-    padding-left: 16px;
-    padding: 0px 16px;
   }
 }
 
