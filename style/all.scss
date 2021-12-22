@@ -25,7 +25,7 @@ nav{
     h1{
         float:left;
         a{
-            background-image: url(/img/taiwango-logo.png);
+            background-image: url(./img/taiwango-logo.png);
             background-position: center;
             height:41px;
             width:149px;
@@ -203,10 +203,11 @@ nav{
 }
 
 .packageTour-Kaohsiung{
-    margin-right:40px;
-   @include pad{
-    margin-right:0; 
     margin-bottom:40px;
+    margin-right:40px;
+   @include mobile{
+    margin-right:0; 
+    
   }
 }
 .kaohsiung-txt , .taipei-txt{
