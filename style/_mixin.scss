@@ -11,3 +11,9 @@
         @content
     }
 }
+
+@mixin desktopbelow{
+    @media (min-width:992px){
+        @content
+    }
+}

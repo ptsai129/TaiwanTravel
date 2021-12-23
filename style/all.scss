@@ -194,6 +194,7 @@ nav{
         margin-bottom: 30px;
         font-weight: 700;
         font-size: 30px;
+        font-family: 'Noto Sans TC',sans-serif;
     }
 }
 
@@ -299,7 +300,8 @@ nav{
     @include mobile{
         font-size: 12px;
         padding:15px 17px 15px 93px;
-
+        margin-top: 12px;
+        margin-bottom: 42px;
     }
 }
 
@@ -309,3 +311,29 @@ nav{
         padding-left: 66px;
     }
 }
+
+.contributeStories{
+    h3{
+        font-size: 28px;
+        font-weight:700;
+        font-family: 'Noto Sans TC',sans-serif;
+    }
+}
+
+.contribute-card {
+    img{
+    width:399px;
+    height:526px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    }
+    .contribute-text{
+        border:1px solid $secondary;
+        height:136px;
+        border-radius: 10px;
+    }
+
+    
+}
+

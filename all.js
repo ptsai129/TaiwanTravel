@@ -5,6 +5,7 @@
         loop: true,
     
       });
+  //公告swiper
       var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1.5,
             spaceBetween: 5,
@@ -64,4 +65,28 @@ const atttractionSwiper = new Swiper(".atttractionSwiper", {
   
 
 
-  
+  //投稿專區swiper
+
+    
+const contributeSwiper = new Swiper(".contributeSwiper", {
+  slidesPerView: 1.2,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 576px
+    576: {
+      slidesPerView: 1.7,
+      spaceBetween: 15
+    },
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2.3,
+      spaceBetween: 18
+    },
+    // when window width is >= 996px
+    996: {
+      slidesPerView: 2.7,
+      spaceBetween: 22
+    }
+  }
+});
