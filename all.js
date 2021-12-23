@@ -62,3 +62,6 @@ const atttractionSwiper = new Swiper(".atttractionSwiper", {
     }
   });
   
+
+
+  

@@ -179,9 +179,6 @@ nav {
   nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -448,6 +445,60 @@ nav {
     width: 210px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+}
+
+.card {
+  position: relative;
+}
+
+.card-tag {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  font-size: 28px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  padding: 28px 14px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+@media (max-width: 767px) {
+  .card-tag {
+    top: 40px;
+    padding: 15px 10px;
+    font-size: 16px;
+  }
+}
+
+.btn {
+  background-color: #00C2BA;
+  border: none;
+  border-radius: 10px;
+  color: #ffff;
+  font-size: 20px;
+  padding: 23px 26px 23px 137px;
+  margin-top: 38px;
+  margin-bottom: 92px;
+}
+
+@media (max-width: 767px) {
+  .btn {
+    font-size: 12px;
+    padding: 15px 17px 15px 93px;
+  }
+}
+
+.btn-IconPadding {
+  padding-left: 95px;
+}
+
+@media (max-width: 767px) {
+  .btn-IconPadding {
+    padding-left: 66px;
   }
 }
 /*# sourceMappingURL=all.css.map */
