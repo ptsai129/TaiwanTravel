@@ -193,7 +193,7 @@ nav {
 }
 
 .nav-title h1 a {
-  background-image: url(/img/taiwango.png);
+  background-image: url(https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true);
   background-position: center;
   height: 41px;
   width: 149px;
@@ -515,6 +515,13 @@ nav {
   font-size: 28px;
   font-weight: 700;
   font-family: 'Noto Sans TC',sans-serif;
+  margin-bottom: 37px;
+}
+
+@media (max-width: 767px) {
+  .contributeStories h3 {
+    margin-bottom: 27px;
+  }
 }
 
 .contribute-card img {
