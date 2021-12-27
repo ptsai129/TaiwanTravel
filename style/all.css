@@ -129,8 +129,16 @@ a {
   text-align: right;
 }
 
-.background-primary {
+.bg-primary {
   background-color: #FFCC00;
+}
+
+.bg-purple {
+  background-color: #A27EB8;
+}
+
+.bg-secondary {
+  background-color: #FF8800;
 }
 
 .ps-35 {
@@ -143,6 +151,10 @@ a {
 
 .mb-8 {
   margin-bottom: 8px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }
 
 .mt-18 {
@@ -474,15 +486,8 @@ nav {
 @media (max-width: 767px) {
   .card-tag {
     top: 80px;
-    right: 40px;
     padding: 15px 10px;
     font-size: 24px;
-  }
-}
-
-@media (min-width: 576px) {
-  .card-tag {
-    right: 0px;
   }
 }
 
@@ -516,7 +521,7 @@ nav {
   }
 }
 
-.contributeStories h3 {
+.contributeStories h3, .activityInfo h3 {
   font-size: 28px;
   font-weight: 700;
   font-family: 'Noto Sans TC',sans-serif;
@@ -524,13 +529,14 @@ nav {
 }
 
 @media (max-width: 767px) {
-  .contributeStories h3 {
+  .contributeStories h3, .activityInfo h3 {
     margin-bottom: 27px;
   }
 }
 
 .contribute-card img {
   height: 526px;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: 20px;
   -o-object-fit: cover;
@@ -541,5 +547,144 @@ nav {
   border: 1px solid #FF8800;
   height: 136px;
   border-radius: 10px;
+  padding: 14px 50px 14px 14px;
+  position: relative;
+}
+
+.contribute-card .contribute-text p {
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.question-font {
+  font-size: 35px;
+  font-family: Roboto, serif;
+  font-weight: 700;
+  margin-right: 14px;
+}
+
+.icon-position {
+  color: black;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  font-size: 28px;
+}
+
+.activityInfo-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(255, 204, 0, 0.3);
+  border-radius: 10px;
+  padding: 23px 41px 23px 70px;
+}
+
+@media (max-width: 992px) {
+  .activityInfo-item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .activityInfo-item {
+    padding: 12px;
+  }
+}
+
+.date {
+  font-family: Roboto, serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .date {
+    font-size: 12px;
+  }
+}
+
+.activityLabel {
+  border-radius: 10px;
+  text-align: center;
+  padding: 23px 40px;
+  margin-left: 30px;
+}
+
+@media (max-width: 992px) {
+  .activityLabel {
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .activityLabel {
+    padding: 2px 18px;
+    border-radius: 5px;
+    margin-left: 12px;
+  }
+}
+
+.activityLabel p {
+  color: #ffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Noto Sans TC',sans-serif;
+}
+
+@media (max-width: 767px) {
+  .activityLabel p {
+    font-size: 14px;
+  }
+}
+
+.activity-txt {
+  width: 469px;
+  font-size: 18px;
+  margin-left: 13px;
+  line-height: 26px;
+}
+
+@media (max-width: 767px) {
+  .activity-txt {
+    font-size: 16px;
+  }
+}
+
+.recruitment {
+  margin-top: 92px;
+  width: 610px;
+  border-radius: 15px;
+  padding: 16px 80px;
+}
+
+.recruitment h3 {
+  margin-top: 16px;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Noto Sans TC',sans-serif;
+}
+
+.recruitment-subtitle {
+  margin-top: 85px;
+  margin-bottom: 31px;
+  font-size: 30px;
+  font-family: Roboto, serif;
+  font-weight: 700;
+}
+
+.recruitment-txt {
+  margin-bottom: 30px;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.recruitmentBtn {
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 /*# sourceMappingURL=all.css.map */

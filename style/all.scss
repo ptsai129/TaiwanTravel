@@ -276,13 +276,11 @@ nav{
 
     @include mobile{
         top:80px;
-        right:40px;
         padding:15px 10px;
         font-size: 24px;
     }
-    @include mobileUp{
-        right:0px;
-    }
+  
+
     
   
 }
@@ -312,7 +310,7 @@ nav{
     }
 }
 
-.contributeStories{
+.contributeStories ,.activityInfo{
     h3{
         font-size: 28px;
         font-weight:700;
@@ -327,6 +325,7 @@ nav{
 .contribute-card {
     img{
     height:526px;
+    width:100%;
     border-radius: 10px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -335,7 +334,117 @@ nav{
         border:1px solid $secondary;
         height:136px;
         border-radius: 10px;
+        padding:14px 50px 14px 14px;
+        position: relative;
+        p{
+            line-height: 24px;
+            font-weight: 400;
+        }
     }
    
+}
+.question-font{
+    font-size: 35px;
+    font-family: Roboto, serif;
+    font-weight: 700;
+    margin-right: 14px;
+}
+.icon-position{
+    color:black;
+    position: absolute;
+    top:50px;
+    right:10px;
+    font-size: 28px;
+
+}
+
+.activityInfo-item{
+    display:flex;
+    align-items: center;
+    background-color: rgba(255, 204, 0, 0.3);
+   
+    border-radius:10px;
+    padding:23px 41px 23px 70px;
+    @include pad{
+        flex-wrap: wrap;
+    }
+    @include mobile{
+        padding:12px;
+    }
+}
+.date{
+    font-family:Roboto, serif;
+    font-size: 28px;
+    font-weight: 700;
+    @include mobile{
+        font-size: 12px;
+    }
+}
+
+.activityLabel{
+    
+    border-radius: 10px;
+    text-align: center;
+    padding:23px 40px;
+    margin-left: 30px;
+    @include pad{
+        margin-left: 12px;
+    }
+    @include mobile{
+        padding:2px 18px;
+        border-radius: 5px;
+        margin-left: 12px;
+    }
+    p{
+        color:$light;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Noto Sans TC',sans-serif;
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}
+
+
+.activity-txt{
+    width:469px;
+    font-size: 18px;
+    margin-left: 13px;
+    line-height: 26px;
+
+    @include mobile{
+        font-size: 16px;
+    }
+}
+
+.recruitment{
+    margin-top: 92px;
+    width:610px;
+    border-radius: 15px;
+    padding:16px 80px; 
+    h3{
+        margin-top: 16px;
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Noto Sans TC',sans-serif;
+    }
+}
+.recruitment-subtitle{
+    margin-top: 85px;
+    margin-bottom: 31px;
+    font-size: 30px;
+    font-family: Roboto, serif;
+    font-weight: 700;
+}
+
+.recruitment-txt{
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 26px;
+}
+.recruitmentBtn{
+    margin-bottom:0px;
+    margin-top: 0px;
 }
 

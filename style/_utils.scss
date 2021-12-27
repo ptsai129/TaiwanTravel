@@ -26,8 +26,14 @@
 .text-right{
     text-align: right;
 }
-.background-primary{
+.bg-primary{
     background-color:$primary;
+}
+.bg-purple{
+    background-color: #A27EB8;
+}
+.bg-secondary{
+    background-color: $secondary;
 }
 .ps-35{
     padding-right: 35px;
@@ -38,6 +44,10 @@
 }
 .mb-8{
     margin-bottom: 8px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
 }
 .mt-18{
     margin-top: 18px;

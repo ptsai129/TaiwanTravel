@@ -17,12 +17,12 @@
         },
               //when window width is >576px
               576: {
-          slidesPerView: 1.9,
-          spaceBetween: 15
+          slidesPerView: 2.3,
+          spaceBetween: 10
         },
         // when window width is >= 768px
         768: {
-          slidesPerView: 2.5,
+          slidesPerView: 2.7,
           spaceBetween: 5
         },
         // when window width is >= 996px
@@ -46,7 +46,7 @@ const atttractionSwiper = new Swiper(".atttractionSwiper", {
     // Responsive breakpoints
     breakpoints: {
       320: {
-        slidesPerView: 1.5,
+        slidesPerView: 1.8,
         spaceBetween: 10
       },
       // when window width is >= 576px
