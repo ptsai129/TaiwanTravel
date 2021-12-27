@@ -12,12 +12,12 @@
             breakpoints:{
                  // when window width is >= 320px
         320: {
-          slidesPerView: 1.7,
+          slidesPerView: 1.5,
           spaceBetween: 10
         },
               //when window width is >576px
               576: {
-          slidesPerView: 2.2,
+          slidesPerView: 1.9,
           spaceBetween: 15
         },
         // when window width is >= 768px
@@ -41,18 +41,22 @@
 
   
 const atttractionSwiper = new Swiper(".atttractionSwiper", {
-    slidesPerView: 1.7,
-    spaceBetween: 16,
+    slidesPerView: 1.5,
+    spaceBetween: 8,
     // Responsive breakpoints
     breakpoints: {
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 10
+      },
       // when window width is >= 576px
       576: {
-        slidesPerView: 2.7,
-        spaceBetween: 20
+        slidesPerView: 2.2,
+        spaceBetween: 24
       },
       // when window width is >= 768px
       768: {
-        slidesPerView: 3,
+        slidesPerView: 3.3,
         spaceBetween: 24
       },
       // when window width is >= 996px
@@ -69,14 +73,19 @@ const atttractionSwiper = new Swiper(".atttractionSwiper", {
 
     
 const contributeSwiper = new Swiper(".contributeSwiper", {
-  slidesPerView: 1.2,
-  spaceBetween: 10,
+  slidesPerView: 1,
+  spaceBetween: 15,
   // Responsive breakpoints
   breakpoints: {
-    // when window width is >= 576px
+    // when window width is >= 375px
+    375: {
+      slidesPerView: 1.3,
+      spaceBetween: 15
+    },
+  // when window width is >= 576px
     576: {
       slidesPerView: 1.7,
-      spaceBetween: 15
+      spaceBetween: 16
     },
     // when window width is >= 768px
     768: {
@@ -90,3 +99,8 @@ const contributeSwiper = new Swiper(".contributeSwiper", {
     }
   }
 });
+
+
+//APP ID：c90e7fb7fd154cf9b4856fb906edd27e
+//APP Key：HpHO3DVdPB_6MNKonn5qQF_qkOo
+

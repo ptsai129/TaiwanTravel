@@ -202,8 +202,8 @@ nav{
 .packageTour-Kaohsiung{
    margin-right:40px;
     @include mobile{
-    margin-right: 0px;
     margin-bottom: 40px;
+    margin-right: 0px;
     }
  
 }
@@ -257,17 +257,11 @@ nav{
 .explore-img {
       border-radius: 15px;
       height:231px;
-      width:316px;
-     @include mobile{
-            height:138px;
-            width:210px;
-            object-fit: cover;
-     }
-    }
+       width:316px;
+      object-fit: cover;
+      position:relative;
 
-.card{
-    position:relative;
-}
+    }
 
 .card-tag{
     position:absolute;
@@ -279,12 +273,18 @@ nav{
     padding: 28px 14px;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    @include mobile{
-        top:40px;
-        padding:15px 10px;
-        font-size: 16px;
-    }
 
+    @include mobile{
+        top:80px;
+        right:40px;
+        padding:15px 10px;
+        font-size: 24px;
+    }
+    @include mobileUp{
+        right:0px;
+    }
+    
+  
 }
 
 //按鈕
@@ -326,7 +326,6 @@ nav{
 
 .contribute-card {
     img{
-    width:399px;
     height:526px;
     border-radius: 10px;
     margin-bottom: 20px;

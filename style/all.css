@@ -141,6 +141,10 @@ a {
   padding-left: 20px;
 }
 
+.mb-8 {
+  margin-bottom: 8px;
+}
+
 .mt-18 {
   margin-top: 18px;
 }
@@ -159,6 +163,10 @@ a {
 
 .rounded-2 {
   border-radius: 20px;
+}
+
+.fz-20 {
+  font-size: 20px;
 }
 
 .fz-12 {
@@ -389,8 +397,8 @@ nav {
 
 @media (max-width: 767px) {
   .packageTour-Kaohsiung {
-    margin-right: 0px;
     margin-bottom: 40px;
+    margin-right: 0px;
   }
 }
 
@@ -444,18 +452,8 @@ nav {
   border-radius: 15px;
   height: 231px;
   width: 316px;
-}
-
-@media (max-width: 767px) {
-  .explore-img {
-    height: 138px;
-    width: 210px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
-.card {
+  -o-object-fit: cover;
+     object-fit: cover;
   position: relative;
 }
 
@@ -475,9 +473,16 @@ nav {
 
 @media (max-width: 767px) {
   .card-tag {
-    top: 40px;
+    top: 80px;
+    right: 40px;
     padding: 15px 10px;
-    font-size: 16px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-tag {
+    right: 0px;
   }
 }
 
@@ -525,7 +530,6 @@ nav {
 }
 
 .contribute-card img {
-  width: 399px;
   height: 526px;
   border-radius: 10px;
   margin-bottom: 20px;
