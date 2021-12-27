@@ -463,5 +463,26 @@ nav{
     padding-bottom:47px;
     a{
         margin-right: 75px;
+        color:black;
+        font-weight: 700;
+        font-family:'Noto Sans TC', serif;
+        @include mobile{
+            margin-right: 30px;
+            font-size: 12px;
+        }
+    }
+    a:hover{
+        color:$success;
+    }
+}
+
+.links-row{
+    margin-bottom: 27px;
+}
+
+.links-firstrow{
+    @include mobile{
+        margin-bottom: 42px;
+        margin-right: 0px;
     }
 }

@@ -715,5 +715,30 @@ nav {
 
 .footer-links a {
   margin-right: 75px;
+  color: black;
+  font-weight: 700;
+  font-family: 'Noto Sans TC', serif;
+}
+
+@media (max-width: 767px) {
+  .footer-links a {
+    margin-right: 30px;
+    font-size: 12px;
+  }
+}
+
+.footer-links a:hover {
+  color: #00C2BA;
+}
+
+.links-row {
+  margin-bottom: 27px;
+}
+
+@media (max-width: 767px) {
+  .links-firstrow {
+    margin-bottom: 42px;
+    margin-right: 0px;
+  }
 }
 /*# sourceMappingURL=all.css.map */
