@@ -656,10 +656,16 @@ nav {
 }
 
 .recruitment {
-  margin-top: 92px;
+  margin-bottom: 92px;
   width: 610px;
   border-radius: 15px;
   padding: 16px 80px;
+}
+
+@media (max-width: 992px) {
+  .recruitment {
+    padding: 16px 16px;
+  }
 }
 
 .recruitment h3 {
@@ -667,6 +673,12 @@ nav {
   font-size: 40px;
   font-weight: 700;
   font-family: 'Noto Sans TC',sans-serif;
+}
+
+@media (max-width: 767px) {
+  .recruitment h3 {
+    font-size: 25px;
+  }
 }
 
 .recruitment-subtitle {
@@ -677,14 +689,31 @@ nav {
   font-weight: 700;
 }
 
+@media (max-width: 767px) {
+  .recruitment-subtitle {
+    margin-top: 49px;
+    font-size: 20px;
+  }
+}
+
 .recruitment-txt {
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
 }
 
-.recruitmentBtn {
-  margin-bottom: 0px;
-  margin-top: 0px;
+@media (max-width: 767px) {
+  .recruitment-txt {
+    font-size: 16px;
+  }
+}
+
+.footer-links {
+  padding-top: 66px;
+  padding-bottom: 47px;
+}
+
+.footer-links a {
+  margin-right: 75px;
 }
 /*# sourceMappingURL=all.css.map */

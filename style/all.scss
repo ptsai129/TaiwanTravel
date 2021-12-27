@@ -419,15 +419,21 @@ nav{
 }
 
 .recruitment{
-    margin-top: 92px;
+    margin-bottom: 92px;
     width:610px;
     border-radius: 15px;
     padding:16px 80px; 
+    @include pad{
+        padding:16px 16px; 
+    }
     h3{
         margin-top: 16px;
         font-size: 40px;
         font-weight: 700;
         font-family: 'Noto Sans TC',sans-serif;
+        @include mobile{
+            font-size: 25px;
+        }
     }
 }
 .recruitment-subtitle{
@@ -436,15 +442,26 @@ nav{
     font-size: 30px;
     font-family: Roboto, serif;
     font-weight: 700;
+    @include mobile{
+        margin-top: 49px;
+        font-size: 20px;
+    }
 }
 
 .recruitment-txt{
     margin-bottom: 30px;
     font-size: 20px;
     line-height: 26px;
-}
-.recruitmentBtn{
-    margin-bottom:0px;
-    margin-top: 0px;
+    @include mobile{
+        font-size: 16px;
+    }
 }
 
+
+.footer-links{
+    padding-top:66px;
+    padding-bottom:47px;
+    a{
+        margin-right: 75px;
+    }
+}
