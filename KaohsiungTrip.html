@@ -1,12 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taiwan Go - 高雄景點一日遊</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/style/all.css">
 </head>
 <body>
-    
+     <!--導覽列-->   
+     <div class="bg-primary">
+        <nav class="d-flex justify-content-around align-items-center">  
+          <div class="nav-title">
+          <h1><a href="#">Taiwan Go</a></h1>
+          </div>
+          <div class="nav-mobile-links">
+            <a href="#"><i class="fas fa-globe"></i></a>
+          </div>
+          <div class="nav-searchBar d-flex">
+            <input type="text" placeholder="你想去哪裡？台南景點"/>
+            <select class="nav-selectArea">
+              <option>熱門景點</option>
+              <option>全部景點</option>
+              <option>網美景點</option>
+              <option>戶外景點</option>
+              <option>鄉下景點</option>
+              <option>DIY活動</option>
+            </select>
+            <button><i class="fas fa-search py-7 px-25"></i></button>
+          </div>
+          <div class="nav-links d-flex text-center">
+           <a href="#" class="ps-35 fz-12"><i class="fab fa-facebook fz-30"></i> <br/>Facebook</a>
+           <a href="#" class="fz-12"><i class="fas fa-globe fz-30"></i><br />語言</a>
+          </div>
+          <div class="nav-mobile-searchBar ">
+            <input type="text" class="rounded-2 border-0" placeholder="你想去哪裡？台南景點"/>
+          </div>
+        </nav>
+      </div>
+
+    <!--高雄景點介紹-->  
+      <div class="KaohsiungAttration container">
+      <h1 class="text-center fz-50">高雄景點一日遊</h1>
+      <img src="/img/banner-kaohsiung.png" class="KaohsiungAttration-img" alt="高雄形象圖片">
+      <h2 class="text-center">〔 駁二藝術特區 〕</h2>
+      <p>「駁二」位於高雄港第三船渠內，原為一般的港口倉庫，2001年一群熱心熱血的藝文界人士成立了駁二藝術發展協會，
+        催生推動駁二藝術特區作為南部人文藝術發展的基地，將駁二規劃成一個獨特的藝術開放空間，提供藝術家及學生一個
+        創作發表的環境，已成為高雄最有人氣的文化景點。</p>
+      <div class="attrationIntro d-flex align-items-center">
+        <img src="/img/pier2shop.png" class="attractionIntro-img" alt="駁二圖片">
+        <div class="attrationIntro-txt">
+          <p>駁二藝術特區從初期的2棟倉庫，發展到現在，主要分為大勇倉庫群、大義倉庫群和鼓山區的蓬萊倉庫群三個區域。
+            大勇倉庫群，除了藝術展演空間、in89駁二電影院外，還有老字號的帕莎蒂娜、本東倉庫，以及許多新設立的商家，
+            如誠品書局等，可以滿足遊客走逛、閱讀、飲食等需求。</p>
+        </div>
+      </div>
+      <h2 class="text-center">〔 旗津星空隧道 〕</h2>
+      <img src="/img/starskytunnel.png" alt="旗津星空隧道" class="KaohsiungAttration-img">
+      <p>開鑿於日治時期，穿透旗後山的旗津隧道原為軍事戰備隧道，於2005年整建，開闢成星光隧道供遊客及自行車族遊憩。
+        隧道內鋪設木棧道，內壁飾以十二星座的夜光彩繪及漂流木、蓄光石等素材，洞口吹來的清涼海風，頗有置身點點星空下的浪漫之感。
+        星空隧道串連旗後燈塔、旗後砲台、珊瑚礁地形等獨有美景，是全國唯一的海景自行車道，無論步行或騎車，皆能給予遊客身心視野的驚豔感受。
+      </p>
+      <div class="attrationIntro d-flex align-items-center">
+        <img src="/img/MiaoqianRd.png" class=" attractionIntro-img" alt="廟前路">
+        <div class="attrationIntro-txt">
+          <p>來到旗津遊玩，別忘了到廟前路享用海產大餐，可補充體力，消除遊玩後的疲累，讓你大飽口福。</p>
+        </div>
+      </div>
+      <img src="/img/cijinBeach.png" alt="旗津海灘吧">
+      <p>作為旗津觀光亮點，「旗津海灘吧」除了提供美味的輕食及冷飲外，更可以舉辦多元沙灘體育活動，包括了沙灘足球、
+        沙灘排球等。為旗津的夜增添了更多樂趣及魅力，旗津的夜，狂野而熱情。</p>
+      </div>
+    <!--footer-->
+    <div class="bg-primary">
+    <footer class="container">
+    <div class="footer-links d-flex flex-wrap justify-content-center">
+      <a href="#" class="links-firstrow">關於台灣GO</a>
+      <div class="links">
+      <ul class="d-flex links-row">
+        <li><a href="#">投稿說明</a></li>
+        <li><a href="#">最新消息</a></li>
+        <li><a href="#">友善旅遊</a></li>
+        <li><a href="#">活動行事曆</a></li>
+      </ul>
+      <ul class="d-flex links-row">
+        <li><a href="#">投稿說明</a></li>
+        <li><a href="#">展覽資訊</a></li>
+      </ul>
+      <ul class="d-flex links-row">
+        <li><a href="#">版權所有</a></li>
+        <li><a href="#">景點告示</a></li>
+      </ul>
+      </div>
+    </div>
+    <a href="#"><img src="https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true" alt="TaiwanGoLogo"></a>
+    <p class="pb-16" >Design 芬妮</p>
+    </footer>
 </body>
 </html>

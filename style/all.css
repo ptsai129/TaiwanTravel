@@ -145,6 +145,10 @@ a {
   padding-right: 35px;
 }
 
+.pb-16 {
+  padding-bottom: 16px;
+}
+
 .pe-20 {
   padding-left: 20px;
 }
@@ -179,6 +183,10 @@ a {
 
 .fz-20 {
   font-size: 20px;
+}
+
+.fz-50 {
+  font-size: 50px;
 }
 
 .fz-12 {
@@ -739,6 +747,128 @@ nav {
   .links-firstrow {
     margin-bottom: 42px;
     margin-right: 0px;
+  }
+}
+
+.KaohsiungAttration h1 {
+  font-family: 'Noto Sans TC',serif;
+  font-weight: 700;
+  line-height: 72px;
+  margin-top: 92px;
+  margin-bottom: 92px;
+}
+
+@media (max-width: 992px) {
+  .KaohsiungAttration h1 {
+    font-size: 25px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    line-height: 36px;
+  }
+}
+
+.KaohsiungAttration img {
+  border-radius: 15px;
+}
+
+.KaohsiungAttration .KaohsiungAttration-img {
+  margin-bottom: 42px;
+  width: 100%;
+  height: 560px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .KaohsiungAttration .KaohsiungAttration-img {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .KaohsiungAttration .KaohsiungAttration-img {
+    height: 200px;
+  }
+}
+
+.KaohsiungAttration h2 {
+  font-size: 35px;
+  font-family: 'Noto Sans TC',serif;
+  font-weight: 700;
+  margin-bottom: 42px;
+}
+
+@media (max-width: 992px) {
+  .KaohsiungAttration h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+.KaohsiungAttration p {
+  font-weight: 500;
+  font-family: 'Noto Sans TC',serif;
+  line-height: 24px;
+  font-size: 20px;
+  margin-top: 42px;
+  margin-bottom: 92px;
+}
+
+@media (max-width: 992px) {
+  .KaohsiungAttration p {
+    font-size: 16px;
+  }
+}
+
+.attrationIntro {
+  margin-top: 92px;
+  margin-bottom: 92px;
+}
+
+@media (max-width: 767px) {
+  .attrationIntro {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.attractionIntro-img {
+  width: 505px;
+  height: 360px;
+  margin-right: 125px;
+}
+
+@media (max-width: 992px) {
+  .attractionIntro-img {
+    width: 50%;
+    margin-right: 16px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .attractionIntro-img {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.attrationIntro-txt {
+  width: 400px;
+}
+
+@media (max-width: 992px) {
+  .attrationIntro-txt {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .attrationIntro-txt {
+    width: 100%;
+    margin-top: 16px;
   }
 }
 /*# sourceMappingURL=all.css.map */

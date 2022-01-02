@@ -486,3 +486,99 @@ nav{
         margin-right: 0px;
     }
 }
+
+.KaohsiungAttration{
+    h1{
+        font-family: 'Noto Sans TC',serif;
+        font-weight: 700;
+        line-height: 72px;
+        margin-top: 92px;
+        margin-bottom: 92px;
+        @include pad{
+            font-size: 25px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            line-height: 36px;
+        }
+    }
+    img{
+        border-radius: 15px;
+    }
+    .KaohsiungAttration-img{
+        margin-bottom: 42px;
+        width:100%;
+        height:560px;
+        object-fit: cover;
+        @include pad{
+            margin-bottom: 16px;
+        }
+        @include mobile{
+            height:200px;
+        }
+    }
+    h2{
+        font-size: 35px;
+        font-family: 'Noto Sans TC',serif;
+        font-weight: 700;
+        margin-bottom: 42px;
+        @include pad{
+            margin-bottom: 16px;
+            font-size: 20px;
+        }
+    }
+    p{
+        font-weight: 500;
+        font-family: 'Noto Sans TC',serif;
+        line-height: 24px;
+        font-size: 20px;
+        margin-top: 42px;
+        margin-bottom: 92px;
+        @include pad{
+           
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+
+
+.attrationIntro{
+    margin-top: 92px;
+    margin-bottom: 92px;
+    @include mobile{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+    }
+}
+.attractionIntro-img{
+  width:505px;
+  height:360px;
+  margin-right: 125px;
+  @include pad {
+     width:50%;
+      margin-right: 16px;
+      height:200px;
+  }
+  @include mobile{
+      width: 100%;
+      margin-right: 0px;
+  }
+
+}
+
+.attrationIntro-txt{
+    width:400px;
+    @include pad{
+        width:45%;
+        
+    }
+    @include mobile{
+        width:100%;
+        margin-top: 16px;
+       
+    }
+
+}
