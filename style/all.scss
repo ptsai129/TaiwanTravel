@@ -224,6 +224,10 @@ nav{
         margin-bottom: 26px;
         padding-right: 26px;
         color:black;
+        &:hover{
+            color:$success;
+            font-weight: 700;
+        }
     }
 }
 
@@ -581,4 +585,78 @@ nav{
        
     }
 
+}
+
+
+.breadcrumbs{
+    margin-top: 92px;
+    margin-bottom: 46px;
+
+}
+
+.breadcrumbs-item{
+    display: inline-block;
+}
+
+.breadcrumbs-item:not(:last-of-type)::after{
+ content:'>';
+ margin:0 5px;
+}
+
+.breadcrumbs-link{
+    color:black;
+    font-family:  'Noto Sans TC',serif;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.breadcrumbs-link-active{
+    font-weight: 700;
+}
+
+.main{
+    h2{
+        font-size: 30px;
+        font-family: 'Noto Sans TC',serif;
+        font-weight: 700;
+        margin-bottom: 87px;
+    }
+}
+
+
+.selectGroup{
+    margin-bottom: 92px;
+}
+.areaList{
+    height:55px;
+    padding: 13px 40px;
+    outline:none;
+    border-radius: 20px;
+    border:1px solid $secondary;
+    color:$secondary;
+    font-size: 20px;
+    margin-right: 42px;
+   
+    option{
+        font-size: 20px;
+        color:$secondary;
+    }
+}
+
+.categoryBtn{
+    background-color: $light;
+    border:1px solid $secondary;
+    border-radius: 20px;
+    padding:13px;
+    margin-right: 20px;
+    a{
+        color:$secondary;
+        font-size: 20px;
+    }
+    &:hover{
+            background-color:$secondary;
+            a{
+                color:$light;
+            }
+    }
 }
