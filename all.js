@@ -101,6 +101,25 @@ const contributeSwiper = new Swiper(".contributeSwiper", {
   }
 });
 
+
+//人氣景點探索按鈕swiper
+
+const categoryBtnSwiper = new Swiper(".categoryBtn-swiper", {
+  slidesPerView: 2.5,
+  spaceBetween: 15,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 375px
+    375: {
+      slidesPerView: 3.4,
+      spaceBetween: 30
+    }
+  }
+});
+
+
+
+//TDX API
 function init(){
   getAttractions();
 }

@@ -52,7 +52,7 @@
       </li>
      </ul>
     <h2 class="text-center">景點列表</h2> 
-    <div class="selectGroup d-flex justify-content-center">
+  <div class="selectGroup d-flex flex-wrap">
     <select name="district"  class="areaList">
       <option class="selectDefault text-center">地區</option>
       <option value="Taipei">台北市</option>
@@ -84,44 +84,58 @@
     <button class="categoryBtn"><a href="#">鄉下景點</a></button>
     <button class="categoryBtn"><a href="#">DIY景點</a></button>
   </div>
-   
-  <ul class="attractionList">
-    <li></li>
-  </ul>
+  <div class="selectGroup-mobile">
+  <!-- Slider main container -->
+  <div class="swiper categoryBtn-swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper categoryBtn-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">熱門景點</a></button></div>
+    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">網美景點</a></button></div>
+    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">戶外景點</a></button></div>
+    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">DIY景點</a></button></div>
+  </div>
+  </div>
+  </div>
+   </div>
+  
+
+
+  
+    
 
     
-</div>
-    
-    <!--footer-->
+
+<!--footer-->
 <div class="bg-primary">
-    <footer class="container">
-    <div class="footer-links d-flex flex-wrap justify-content-center">
-      <a href="#" class="links-firstrow">關於台灣GO</a>
-      <div class="links">
-      <ul class="d-flex links-row">
-        <li><a href="#">投稿說明</a></li>
-        <li><a href="#">最新消息</a></li>
-        <li><a href="#">友善旅遊</a></li>
-        <li><a href="#">活動行事曆</a></li>
-      </ul>
-      <ul class="d-flex links-row">
-        <li><a href="#">旅遊指南</a></li>
-        <li><a href="#">電子報</a></li>
-      </ul>
-      <ul class="d-flex links-row">
-        <li><a href="#">版權所有</a></li>
-        <li><a href="#">景點告示</a></li>
-      </ul>
-      </div>
+  <footer class="container">
+  <div class="footer-links d-flex flex-wrap justify-content-center">
+    <a href="#" class="links-firstrow">關於台灣GO</a>
+    <div class="links">
+    <ul class="d-flex links-row">
+      <li><a href="#">投稿說明</a></li>
+      <li><a href="#">最新消息</a></li>
+      <li><a href="#">友善旅遊</a></li>
+      <li><a href="#">活動行事曆</a></li>
+    </ul>
+    <ul class="d-flex links-row">
+      <li><a href="#">旅遊指南</a></li>
+      <li><a href="#">電子報</a></li>
+    </ul>
+    <ul class="d-flex links-row">
+      <li><a href="#">版權所有</a></li>
+      <li><a href="#">景點告示</a></li>
+    </ul>
     </div>
-    <a href="#"><img src="https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true" alt="TaiwanGoLogo"></a>
-    <p class="pb-16">Design 芬妮</p>
-    </footer>
-    </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
-      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-      <script src="all.js"></script>
-      </body>
-    </html>
+  </div>
+  <a href="#"><img src="https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true" alt="TaiwanGoLogo"></a>
+  <p class="pb-16">Design 芬妮</p>
+  </footer>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="all.js"></script>
+    </body>
+  </html>
     
