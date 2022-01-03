@@ -366,7 +366,6 @@ nav{
     display:flex;
     align-items: center;
     background-color: rgba(255, 204, 0, 0.3);
-   
     border-radius:10px;
     padding:23px 41px 23px 70px;
     @include pad{
@@ -516,6 +515,7 @@ nav{
         object-fit: cover;
         @include pad{
             margin-bottom: 16px;
+           
         }
         @include mobile{
             height:200px;
@@ -640,6 +640,7 @@ nav{
     display: none;
     @include mobile{
         display: block;
+        margin-bottom: 32px;
     }
 }
 
@@ -655,6 +656,9 @@ nav{
      @include pad{
          font-size: 14px;
          padding: 10px 20px;
+     }
+     @include mobile{
+         height:auto;
      }
     option{
         font-size: 20px;
@@ -706,6 +710,65 @@ nav{
     a{
         color:$secondary;
         font-size: 14px;
+      
     }
+    &:hover{
+        background-color:$secondary;
+       a{
+        color:$light;
+       } 
+    }    
+   
   
+}
+
+.attractionList{
+    justify-content: space-around;
+    h4{
+        text-align: center;
+        margin-top: 18px;
+        font-size: 18px;
+        font-weight: 400;
+        font-family:  'Noto Sans TC',serif;
+        @include mobile{
+            margin-top: 6px;
+            font-size: 12px;
+        }
+    }
+}
+.attractionList-item{
+ position: relative;
+ margin-bottom: 42px;
+ @include mobile{
+     margin-bottom: 28px;
+ }
+}
+.attractionList-img{
+    width:325px;
+    height:216px;
+    border-radius: 15px;  
+    
+    @include mobile{
+        width:162px;
+        height:103px;
+    }
+}
+
+.attractionList-label{
+    position:absolute;
+    top:60px;
+    right:0px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    writing-mode: vertical-rl;
+    padding: 28px 14px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    @include mobile{
+        top:10px;
+        padding:15px 10px;
+        font-size: 12px;
+    }
+    
 }

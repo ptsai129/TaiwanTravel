@@ -119,20 +119,38 @@ const categoryBtnSwiper = new Swiper(".categoryBtn-swiper", {
 
 
 
-//TDX API
+//初始化
 function init(){
   getAttractions();
 }
+init();
 
+//撈出所有旅遊景點資料
 function getAttractions(){
 axios.get(
-  'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24top=10&%24format=JSON',
+  'https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24top=30&%24format=JSON',
   {
      headers: getAuthorizationHeader()
   }
 )
 .then(function (response) {
- console.log(response.data);
+ let attractionData = response.data;
+ let str ="";
+ attractionData.forEach(function(item){
+  if(item.Picture.PictureUrl1 == undefined || item.Picture.PictureUrl1 == undefined || item.Class1 == undefined|| item.ScenicSpotName ==undefined){
+    return;
+  }
+   str+=`<li>
+   <div class="attractionList-item">
+     <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
+     <div class="attractionList-label">
+       <h3>${item.Class1}</h3>
+     </div>
+     <h4>${item.ScenicSpotName}</h4>
+   </div>
+ </li>`
+ })
+ document.querySelector(".attractionList").innerHTML = str;
 })
 .catch(function (error) {
  console.log(error);

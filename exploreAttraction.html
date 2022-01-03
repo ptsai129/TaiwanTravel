@@ -4,24 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style/all.css" />
     <title>Taiwan Go - 人氣景點探索</title>
   </head>
   <body>
- <!--導覽列-->   
+    <!--導覽列-->
     <div class="bg-primary">
-      <nav class="d-flex justify-content-around align-items-center">  
+      <nav class="d-flex justify-content-around align-items-center">
         <div class="nav-title">
-        <h1><a href="#">Taiwan Go</a></h1>
+          <h1><a href="#">Taiwan Go</a></h1>
         </div>
         <div class="nav-mobile-links">
           <a href="#"><i class="fas fa-globe"></i></a>
         </div>
         <div class="nav-searchBar d-flex">
-          <input type="text" placeholder="你想去哪裡？台南景點"/>
+          <input type="text" placeholder="你想去哪裡？台南景點" />
           <select class="nav-selectArea">
             <option>熱門景點</option>
             <option>全部景點</option>
@@ -33,109 +44,178 @@
           <button><i class="fas fa-search py-7 px-25"></i></button>
         </div>
         <div class="nav-links d-flex text-center">
-         <a href="#" class="ps-35 fz-12"><i class="fab fa-facebook fz-30"></i> <br/>Facebook</a>
-         <a href="#" class="fz-12"><i class="fas fa-globe fz-30"></i><br />語言</a>
+          <a href="#" class="ps-35 fz-12"
+            ><i class="fab fa-facebook fz-30"></i> <br />Facebook</a
+          >
+          <a href="#" class="fz-12"
+            ><i class="fas fa-globe fz-30"></i><br />語言</a
+          >
         </div>
-        <div class="nav-mobile-searchBar ">
-          <input type="text" class="rounded-2 border-0" placeholder="你想去哪裡？台南景點"/>
+        <div class="nav-mobile-searchBar">
+          <input
+            type="text"
+            class="rounded-2 border-0"
+            placeholder="你想去哪裡？台南景點"
+          />
         </div>
       </nav>
     </div>
 
-   <div class="main container">
-     <ul class="breadcrumbs">
-       <li class="breadcrumbs-item">
-         <a href="#" class="breadcrumbs-link">首頁</a>
-       </li>
-       <li class="breadcrumbs-item">
-        <a href="#" class="breadcrumbs-link breadcrumbs-link-active">人氣景點探索</a>
-      </li>
-     </ul>
-    <h2 class="text-center">景點列表</h2> 
-  <div class="selectGroup d-flex flex-wrap">
-    <select name="district"  class="areaList">
-      <option class="selectDefault text-center">地區</option>
-      <option value="Taipei">台北市</option>
-      <option value="NewTaipei">新北市</option>
-      <option value="Taoyuan">桃園市</option>
-      <option value="Taichung">台中市</option>
-      <option value="Tainan">台南市</option>
-      <option value="Kaohsiung">高雄市</option>
-      <option value="Keelung">基隆市</option>
-      <option value="Hsinchu">新竹市</option>
-      <option value="HsinchuCounty">新竹縣</option>
-      <option value="MiaoliCounty">苗栗縣</option>
-      <option value="ChanghuaCounty">彰化縣</option>
-      <option value="NantouCounty">南投縣</option>
-      <option value="YunlinCounty">雲林縣</option>
-      <option value="ChiayiCounty">嘉義縣</option>
-      <option value="Chiayi">嘉義市</option>
-      <option value="PingtungCounty">屏東</option>
-      <option value="YilanCounty">宜蘭</option>
-      <option value="HualienCounty">花蓮</option>
-      <option value="TaitungCounty">台東</option>
-      <option value="KinmenCounty">金門</option>
-      <option value="PenghuCounty">澎湖</option>
-      <option value="LienchiangCounty">馬祖</option>
-    </select>
-    <button class="categoryBtn"><a href="#">熱門景點</a></button>
-    <button class="categoryBtn"><a href="#">網美景點</a></button>
-    <button class="categoryBtn"><a href="#">戶外景點</a></button>
-    <button class="categoryBtn"><a href="#">鄉下景點</a></button>
-    <button class="categoryBtn"><a href="#">DIY景點</a></button>
-  </div>
-  <div class="selectGroup-mobile">
-  <!-- Slider main container -->
-  <div class="swiper categoryBtn-swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper categoryBtn-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">熱門景點</a></button></div>
-    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">網美景點</a></button></div>
-    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">戶外景點</a></button></div>
-    <div class="swiper-slide"><button class="categoryBtn-mobile"><a href="#">DIY景點</a></button></div>
-  </div>
-  </div>
-  </div>
-   </div>
-  
+    <div class="main container">
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link">首頁</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link breadcrumbs-link-active"
+            >人氣景點探索</a
+          >
+        </li>
+      </ul>
+      <h2 class="text-center">景點列表</h2>
+      <div class="selectGroup d-flex flex-wrap">
+        <select name="district" class="areaList">
+          <option class="selectDefault text-center">地區</option>
+          <option value="Taipei">台北市</option>
+          <option value="NewTaipei">新北市</option>
+          <option value="Taoyuan">桃園市</option>
+          <option value="Taichung">台中市</option>
+          <option value="Tainan">台南市</option>
+          <option value="Kaohsiung">高雄市</option>
+          <option value="Keelung">基隆市</option>
+          <option value="Hsinchu">新竹市</option>
+          <option value="HsinchuCounty">新竹縣</option>
+          <option value="MiaoliCounty">苗栗縣</option>
+          <option value="ChanghuaCounty">彰化縣</option>
+          <option value="NantouCounty">南投縣</option>
+          <option value="YunlinCounty">雲林縣</option>
+          <option value="ChiayiCounty">嘉義縣</option>
+          <option value="Chiayi">嘉義市</option>
+          <option value="PingtungCounty">屏東</option>
+          <option value="YilanCounty">宜蘭</option>
+          <option value="HualienCounty">花蓮</option>
+          <option value="TaitungCounty">台東</option>
+          <option value="KinmenCounty">金門</option>
+          <option value="PenghuCounty">澎湖</option>
+          <option value="LienchiangCounty">馬祖</option>
+        </select>
+        <button class="categoryBtn"><a href="#">熱門景點</a></button>
+        <button class="categoryBtn"><a href="#">網美景點</a></button>
+        <button class="categoryBtn"><a href="#">戶外景點</a></button>
+        <button class="categoryBtn"><a href="#">運動景點</a></button>
+        <button class="categoryBtn"><a href="#">DIY景點</a></button>
+      </div>
+      <div class="selectGroup-mobile">
+        <!-- Slider main container -->
+        <div class="swiper categoryBtn-swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper categoryBtn-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <button class="categoryBtn-mobile">
+                <a href="#">熱門景點</a>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <button class="categoryBtn-mobile">
+                <a href="#">網美景點</a>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <button class="categoryBtn-mobile">
+                <a href="#">戶外景點</a>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <button class="categoryBtn-mobile">
+                <a href="#">運動景點</a>
+              </button>
+            </div>
+            <div class="swiper-slide">
+              <button class="categoryBtn-mobile">
+                <a href="#">DIY景點</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="attractionList d-flex flex-wrap">
+        <!-- <li>
+          <div class="attractionList-item">
+            <img class="attractionList-img" src="img/explorePingtung.png" alt="屏東">
+            <div class="attractionList-label">
+              <h3>屏東</h3>
+            </div>
+            <h4>花蓮 星巴克貨櫃屋</h4>
+          </div>
+        </li>
+        <li>
+          <div class="attractionList-item">
+            <img class="attractionList-img" src="img/explorePingtung.png" alt="屏東">
+            <div class="attractionList-label">
+              <h3>屏東</h3>
+            </div>
+            <h4>花蓮 星巴克貨櫃屋</h4>
+          </div>
+        </li>
+        <li>
+          <div class="attractionList-item ">
+            <img class="attractionList-img" src="img/explorePingtung.png" alt="屏東">
+            <div class="attractionList-label">
+              <h3>屏東</h3>
+            </div>
+            <h4>花蓮 星巴克貨櫃屋</h4>
+          </div>
+        </li>
+        <li>
+          <div class="attractionList-item">
+            <img class="attractionList-img" src="img/explorePingtung.png" alt="屏東">
+            <div class="attractionList-label">
+              <h3>屏東</h3>
+            </div>
+            <h4>花蓮 星巴克貨櫃屋</h4>
+          </div>
+        </li> -->
+      </ul>
 
 
-  
-    
 
-    
 
-<!--footer-->
-<div class="bg-primary">
-  <footer class="container">
-  <div class="footer-links d-flex flex-wrap justify-content-center">
-    <a href="#" class="links-firstrow">關於台灣GO</a>
-    <div class="links">
-    <ul class="d-flex links-row">
-      <li><a href="#">投稿說明</a></li>
-      <li><a href="#">最新消息</a></li>
-      <li><a href="#">友善旅遊</a></li>
-      <li><a href="#">活動行事曆</a></li>
-    </ul>
-    <ul class="d-flex links-row">
-      <li><a href="#">旅遊指南</a></li>
-      <li><a href="#">電子報</a></li>
-    </ul>
-    <ul class="d-flex links-row">
-      <li><a href="#">版權所有</a></li>
-      <li><a href="#">景點告示</a></li>
-    </ul>
     </div>
-  </div>
-  <a href="#"><img src="https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true" alt="TaiwanGoLogo"></a>
-  <p class="pb-16">Design 芬妮</p>
-  </footer>
-  </div>
+
+    <!--footer-->
+    <div class="bg-primary">
+      <footer class="container">
+        <div class="footer-links d-flex flex-wrap justify-content-center">
+          <a href="#" class="links-firstrow">關於台灣GO</a>
+          <div class="links">
+            <ul class="d-flex links-row">
+              <li><a href="#">投稿說明</a></li>
+              <li><a href="#">最新消息</a></li>
+              <li><a href="#">友善旅遊</a></li>
+              <li><a href="#">活動行事曆</a></li>
+            </ul>
+            <ul class="d-flex links-row">
+              <li><a href="#">旅遊指南</a></li>
+              <li><a href="#">電子報</a></li>
+            </ul>
+            <ul class="d-flex links-row">
+              <li><a href="#">版權所有</a></li>
+              <li><a href="#">景點告示</a></li>
+            </ul>
+          </div>
+        </div>
+        <a href="#"
+          ><img
+            src="https://github.com/ptsai129/TaiwanTravel/blob/main/img/taiwango.png?raw=true"
+            alt="TaiwanGoLogo"
+        /></a>
+        <p class="pb-16">Design 芬妮</p>
+      </footer>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="all.js"></script>
-    </body>
-  </html>
-    
+  </body>
+</html>
