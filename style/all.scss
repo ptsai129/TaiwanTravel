@@ -675,10 +675,10 @@ nav{
     border-radius: 20px;
     padding:13px;
     margin-right: 20px;
+    color:$secondary;
   
  
     a{
-        color:$secondary;
         font-size: 20px;
         @include pad{
             font-size: 14px;
@@ -686,9 +686,7 @@ nav{
     }
     &:hover{
             background-color:$secondary;
-            a{
-                color:$light;
-            }
+            color:$light;    
     }
 
     @include pad{

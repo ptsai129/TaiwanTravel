@@ -979,10 +979,10 @@ nav {
   border-radius: 20px;
   padding: 13px;
   margin-right: 20px;
+  color: #FF8800;
 }
 
 .categoryBtn a {
-  color: #FF8800;
   font-size: 20px;
 }
 
@@ -994,9 +994,6 @@ nav {
 
 .categoryBtn:hover {
   background-color: #FF8800;
-}
-
-.categoryBtn:hover a {
   color: #ffff;
 }
 
