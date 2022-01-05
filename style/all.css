@@ -516,11 +516,14 @@ nav {
   background-color: #00C2BA;
   border: none;
   border-radius: 10px;
-  color: #ffff;
   font-size: 20px;
   padding: 23px 26px 23px 137px;
   margin-top: 38px;
   margin-bottom: 92px;
+}
+
+.btn a {
+  color: #ffff;
 }
 
 @media (max-width: 767px) {
