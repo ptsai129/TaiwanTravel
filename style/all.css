@@ -471,6 +471,14 @@ nav {
   font-size: 28px;
   font-weight: 500;
   font-family: 'Noto Sans TC',sans-serif;
+  color: black;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.popularAttraction h2:hover {
+  color: #FF8800;
+  font-weight: 700;
 }
 
 .explore-img {
@@ -1002,7 +1010,6 @@ nav {
 
 @media (max-width: 992px) {
   .categoryBtn {
-    padding: 10px;
     margin-right: 8px;
   }
 }
