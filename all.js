@@ -156,7 +156,8 @@ function getAttractions(){
     }
      str+=`<li>
      <div class="attractionList-item">
-       <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
+      <a href="page.html?=${item.ScenicSpotID}">
+       <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
        <div class="attractionList-label">
          <h3>${item.Class1}</h3>
        </div>
@@ -171,7 +172,7 @@ function getAttractions(){
   }); 
   }
   
-
+   
 //選擇縣市後再點擊按鈕取得資料
 
 const selectGroup = document.querySelector('.selectGroup');
@@ -184,6 +185,7 @@ selectGroup.addEventListener('click',function(e){
          e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
         let city = selectCity.value;
         if (city == "選取地區"){
+          getAttractions();
           return;
         }
         axios.get(
@@ -201,7 +203,8 @@ selectGroup.addEventListener('click',function(e){
           }
            str+=`<li>
            <div class="attractionList-item">
-             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
+           <a href="page.html?=${item.ScenicSpotID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
              <div class="attractionList-label">
                <h3>${item.City}</h3>
              </div>
@@ -243,7 +246,8 @@ selectGroupMobile.addEventListener('click',function(e){
           }
            str+=`<li>
            <div class="attractionList-item">
-             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
+           <a href="page.html?=${item.ScenicSpotID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
              <div class="attractionList-label">
                <h3>${item.City}</h3>
              </div>
@@ -285,39 +289,85 @@ selectGroupMobile.addEventListener('click',function(e){
 
 
 //依據選取類別顯示資料(觀光餐飲)
+selectGroup.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'foodAttraction'){
+         return;
+       }else{
+         e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/${city}?%24top=30&%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let foodAttractionData = response.data;
+         let str ="";
+         foodAttractionData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.RestaurantName ==undefined){
+            return;
+          }
+           str+=`<li>
+           <div class="attractionList-item">
+           <a href="page.html?=${item.RestaurantID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.RestaurantName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
 
+       }
+})
 
-// selectGroup.addEventListener('click', function(e){
-//   if(e.target.nodeName != 'A'){
-//     return;
-//   }else{
-//     console.log(e.target.getAttribute("data-type") );
-//     let selectType = e.target.getAttribute("data-type");
-//     axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(Class1,'${selectType}')&%24format=JSON`, {
-//       headers:getAuthorizationHeader()
-//       }
-//     ).then(function(response){
-//       let selectData = response.data;
-//       let str ="";
-     
-//       selectData.forEach(function(item){
-//         if(item.Picture.PictureUrl1 == undefined  || item.Class1 == undefined|| item.ScenicSpotName ==undefined){
-//           return;
-//         }
-//          str+=`<li>
-//          <div class="attractionList-item">
-//            <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
-//            <div class="attractionList-label">
-//              <h3>${selectType}</h3>
-//            </div>
-//            <h4>${item.ScenicSpotName}</h4>
-//          </div>
-//        </li>`
-//        })
-//        document.querySelector(".attractionList").innerHTML = str;
-//     }).catch(function (error) {
-//       console.log(error);
-//      }); 
-//   };
-// })
+selectGroupMobile.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'foodAttraction'){
+         return;
+       }else{
+         e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/${city}?%24top=30&%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let foodAttractionData = response.data;
+         let str ="";
+         foodAttractionData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.RestaurantName ==undefined){
+            return;
+          }
+           str+=`<li>
+           <div class="attractionList-item">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}">
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.RestaurantName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
 
+       }
+})
