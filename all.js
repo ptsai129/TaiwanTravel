@@ -182,7 +182,7 @@ selectGroup.addEventListener('click',function(e){
   if(e.target.getAttribute("data-type") != 'allAttraction'){
          return;
        }else{
-         e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
+         
         let city = selectCity.value;
         if (city == "選取地區"){
           getAttractions();
@@ -226,7 +226,7 @@ selectGroupMobile.addEventListener('click',function(e){
   if(e.target.getAttribute("data-type") != 'allAttraction'){
          return;
        }else{
-        e.target.parentNode.setAttribute("class","categoryBtn-mobile bg-secondary");
+       
         let city = selectCity.value;
         if (city == "選取地區"){
           return;
@@ -293,7 +293,7 @@ selectGroup.addEventListener('click',function(e){
   if(e.target.getAttribute("data-type") != 'foodAttraction'){
          return;
        }else{
-         e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
+        
         let city = selectCity.value;
         if (city == "選取地區"){
           return;
@@ -335,13 +335,13 @@ selectGroupMobile.addEventListener('click',function(e){
   if(e.target.getAttribute("data-type") != 'foodAttraction'){
          return;
        }else{
-         e.target.parentNode.setAttribute("class","categoryBtn bg-secondary");
+        
         let city = selectCity.value;
         if (city == "選取地區"){
           return;
         }
         axios.get(
-          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/${city}?%24top=30&%24format=JSON`,
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant/${city}?%24format=JSON`,
           {
              headers: getAuthorizationHeader()
           }
@@ -360,6 +360,96 @@ selectGroupMobile.addEventListener('click',function(e){
                <h3>${item.City}</h3>
              </div>
              <h4>${item.RestaurantName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
+
+       }
+})
+
+
+//依據選取類別顯示資料(觀光旅宿)
+selectGroup.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'hotelAttraction'){
+         return;
+       }else{
+        
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+         
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Hotel/${city}?%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let hotelAttractionData = response.data;
+         let str ="";
+         hotelAttractionData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.HotelName ==undefined){
+            return;
+          }
+           str+=`<li>
+           <div class="attractionList-item">
+           <a href="page.html?=${item.HotelID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.HotelName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
+
+       }
+})
+
+
+
+selectGroupMobile.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'hotelAttraction'){
+         return;
+       }else{
+        
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+         
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Hotel/${city}?%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let hotelAttractionData = response.data;
+         let str ="";
+         hotelAttractionData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.HotelName ==undefined){
+            return;
+          }
+           str+=`<li>
+           <div class="attractionList-item">
+           <a href="page.html?=${item.HotelID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.HotelName}</h4>
            </div>
          </li>`
          })

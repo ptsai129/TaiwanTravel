@@ -3,7 +3,7 @@ const id = location.href.split("=")[1];
 const attractionContent = document.querySelector('.pageContent');
 
 
-
+//全部景點分頁
 function getAttractionContent(){
     axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24top=30&%24format=JSON&$filter=contains(ScenicSpotID,'${id}')`,
     {
@@ -39,6 +39,27 @@ function getFoodAttractionContent(){
 
 }
 getFoodAttractionContent();
+
+
+//質感住宿分頁
+function getHotelAttractionContent(){
+    axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/Hotel?%24format=JSON&$filter=contains(HotelID,'${id}')`,
+    {
+        headers: getAuthorizationHeader()
+      })
+    .then(
+        function(response){
+            let hotelData = response.data[0];
+            document.querySelector(".js-title").textContent = hotelData.HotelName;
+            document.querySelector(".js-img").setAttribute("src", hotelData.Picture.PictureUrl1);
+            document.querySelector(".js-img").setAttribute("alt", hotelData.Picture.PictureDescription1);
+            document.querySelector(".js-description").textContent = hotelData.Description;
+        })
+
+}
+
+getHotelAttractionContent();
+
 
 
 

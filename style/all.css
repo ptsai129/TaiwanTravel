@@ -253,9 +253,12 @@ nav {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 1px;
-  color: #ffff;
   font-size: 35px;
   padding: 7px 25px;
+}
+
+.nav-searchBar button a {
+  color: #ffff;
 }
 
 @media (max-width: 992px) {
