@@ -1,6 +1,22 @@
 const id = location.href.split("=")[1];
-
 const attractionContent = document.querySelector('.pageContent');
+
+//判斷取得id是屬於什麼類別
+const allType = "C1";
+const RestaurantType ="C3";
+const HotelType = "C4";
+function initPage(){
+if (id.includes(allType) === true){
+    getAttractionContent();
+}else if(id.includes(RestaurantType) === true){
+    getFoodAttractionContent();
+}else if(id.includes(HotelType) === true){
+    getHotelAttractionContent()
+}
+}
+
+initPage();
+
 
 
 //全部景點分頁
@@ -12,7 +28,7 @@ function getAttractionContent(){
     .then(
         function(response){
             let contentData = response.data[0];
-            console.log(contentData);
+            document.querySelector(".js-breadcrumbs").textContent = contentData.ScenicSpotName;
             document.querySelector(".js-title").textContent = contentData.ScenicSpotName;
             document.querySelector(".js-img").setAttribute("src", contentData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", contentData.Picture.PictureDescription1);
@@ -20,7 +36,7 @@ function getAttractionContent(){
 
         })
 }
-getAttractionContent();
+
 
 //品味美食分頁
 function getFoodAttractionContent(){
@@ -31,6 +47,7 @@ function getFoodAttractionContent(){
     .then(
         function(response){
             let foodData = response.data[0];
+            document.querySelector(".js-breadcrumbs").textContent = foodData.RestaurantName;
             document.querySelector(".js-title").textContent = foodData.RestaurantName;
             document.querySelector(".js-img").setAttribute("src", foodData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", foodData.Picture.PictureDescription1);
@@ -38,7 +55,7 @@ function getFoodAttractionContent(){
         })
 
 }
-getFoodAttractionContent();
+
 
 
 //質感住宿分頁
@@ -50,6 +67,7 @@ function getHotelAttractionContent(){
     .then(
         function(response){
             let hotelData = response.data[0];
+            document.querySelector(".js-breadcrumbs").textContent = hotelData.HotelName;
             document.querySelector(".js-title").textContent = hotelData.HotelName;
             document.querySelector(".js-img").setAttribute("src", hotelData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", hotelData.Picture.PictureDescription1);
@@ -58,7 +76,7 @@ function getHotelAttractionContent(){
 
 }
 
-getHotelAttractionContent();
+
 
 
 

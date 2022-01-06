@@ -82,7 +82,7 @@ a {
 
 @media (min-width: 992px) {
   .container {
-    padding: 0px 50px;
+    padding: 0px 125px;
   }
 }
 
@@ -894,6 +894,8 @@ nav {
 .breadcrumbs {
   margin-top: 92px;
   margin-bottom: 46px;
+  font-family: 'Noto Sans TC',serif;
+  color: black;
 }
 
 .breadcrumbs-item {
@@ -907,7 +909,6 @@ nav {
 
 .breadcrumbs-link {
   color: black;
-  font-family: 'Noto Sans TC',serif;
 }
 
 .breadcrumbs-link:hover {
@@ -932,12 +933,17 @@ nav {
           justify-content: center;
 }
 
+@media (max-width: 992px) {
+  .selectGroup {
+    margin-bottom: 16px;
+  }
+}
+
 @media (max-width: 767px) {
   .selectGroup {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    margin-bottom: 12px;
   }
 }
 
@@ -962,6 +968,7 @@ nav {
   color: #ffff;
   font-size: 20px;
   margin-right: 42px;
+  margin-bottom: 16px;
 }
 
 @media (max-width: 992px) {
@@ -1124,6 +1131,19 @@ nav {
   margin-top: 92px;
   margin-bottom: 92px;
   font-family: 'Noto Sans TC',serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pageContent-title {
@@ -1148,41 +1168,45 @@ nav {
 }
 
 .pageContent-img {
-  height: auto;
-  width: 100%;
+  max-height: 560px;
+  width: 1030px;
+  max-width: 100%;
+  margin-bottom: 60px;
   border-radius: 15px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 42px;
 }
 
 @media (max-width: 992px) {
   .pageContent-img {
-    margin-bottom: 20px;
+    margin-bottom: 42px;
   }
 }
 
 @media (max-width: 767px) {
   .pageContent-img {
-    margin-bottom: 16px;
+    margin-bottom: 36px;
   }
 }
 
 .pageContent-txt {
-  font-size: 20px;
+  width: 1030px;
+  max-width: 100%;
+  font-size: 24px;
   font-weight: 500;
-  line-height: 28px;
+  line-height: 36px;
   margin-bottom: 92px;
 }
 
 @media (max-width: 992px) {
   .pageContent-txt {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 24px;
   }
 }
 
 .pageContent-btn {
+  width: 100px;
   background-color: #FF8800;
   padding: 10px;
   border-radius: 15px;
