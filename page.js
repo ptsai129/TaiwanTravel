@@ -5,13 +5,16 @@ const attractionContent = document.querySelector('.pageContent');
 const allType = "C1";
 const RestaurantType ="C3";
 const HotelType = "C4";
+const activityType ="C2"
 function initPage(){
 if (id.includes(allType) === true){
     getAttractionContent();
 }else if(id.includes(RestaurantType) === true){
     getFoodAttractionContent();
 }else if(id.includes(HotelType) === true){
-    getHotelAttractionContent()
+    getHotelAttractionContent();
+}else if (id.includes(activityType) === true){
+    getActivityContent();
 }
 }
 
@@ -28,11 +31,17 @@ function getAttractionContent(){
     .then(
         function(response){
             let contentData = response.data[0];
+            if(contentData.Picture.PictureUrl1 == undefined){
+                contentData.Picture.PictureUrl1 = 'img/taiwantravelimg.png';
+            }else if (contentData.Picture.PictureDescription1 == undefined){
+                contentData.Picture.PictureDescription1 = '景點示意圖';
+            }
             document.querySelector(".js-breadcrumbs").textContent = contentData.ScenicSpotName;
             document.querySelector(".js-title").textContent = contentData.ScenicSpotName;
             document.querySelector(".js-img").setAttribute("src", contentData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", contentData.Picture.PictureDescription1);
             document.querySelector(".js-description").textContent = contentData.DescriptionDetail;
+            document.querySelector(".js-address").innerHTML = `<p class="js-address pageContent-txt">地址:${contentData.Address}</p>`;
 
         })
 }
@@ -47,11 +56,17 @@ function getFoodAttractionContent(){
     .then(
         function(response){
             let foodData = response.data[0];
+            if(foodData.Picture.PictureUrl1 == undefined){
+                foodData.Picture.PictureUrl1 = 'img/taiwannight.png';
+            }else if (foodData.Picture.PictureDescription1 == undefined){
+                foodData.Picture.PictureDescription1 = '餐廳示意圖';
+            }
             document.querySelector(".js-breadcrumbs").textContent = foodData.RestaurantName;
             document.querySelector(".js-title").textContent = foodData.RestaurantName;
             document.querySelector(".js-img").setAttribute("src", foodData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", foodData.Picture.PictureDescription1);
             document.querySelector(".js-description").textContent = foodData.Description;
+            document.querySelector(".js-address").innerHTML = `<p class="js-address pageContent-txt">地址:${foodData.Address}</p>`;
         })
 
 }
@@ -67,15 +82,42 @@ function getHotelAttractionContent(){
     .then(
         function(response){
             let hotelData = response.data[0];
+            if(hotelData.Picture.PictureUrl1 == undefined){
+                hotelData.Picture.PictureUrl1 = 'img/hotelimg.png';
+            }else if (hotelData.Picture.PictureDescription1 == undefined){
+                hotelData.Picture.PictureDescription1 = '旅館示意圖';
+            }
             document.querySelector(".js-breadcrumbs").textContent = hotelData.HotelName;
             document.querySelector(".js-title").textContent = hotelData.HotelName;
             document.querySelector(".js-img").setAttribute("src", hotelData.Picture.PictureUrl1);
             document.querySelector(".js-img").setAttribute("alt", hotelData.Picture.PictureDescription1);
             document.querySelector(".js-description").textContent = hotelData.Description;
+            document.querySelector(".js-address").innerHTML = `<p class="js-address pageContent-txt">地址:${hotelData.Address}</p>`;
         })
 
 }
 
+
+
+//觀光活動分頁
+function getActivityContent(){
+    axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?%24format=JSON&$filter=contains(ActivityID,'${id}')`,
+    {
+        headers: getAuthorizationHeader()
+      })
+    .then(
+        function(response){
+            let activityData = response.data[0];
+          
+            document.querySelector(".js-breadcrumbs").textContent = activityData.ActivityName;
+            document.querySelector(".js-title").textContent = activityData.ActivityName;
+            document.querySelector(".js-img").setAttribute("src", activityData.Picture.PictureUrl1);
+            document.querySelector(".js-img").setAttribute("alt",  activityData.Picture.PictureDescription1);
+            document.querySelector(".js-description").textContent =  activityData.Description;
+            document.querySelector(".js-address").innerHTML = `<p class="js-address pageContent-txt">地址:${ activityData.Address}</p>`;
+        })
+
+}
 
 
 

@@ -856,6 +856,8 @@ nav {
 .attractionIntro-img {
   width: 505px;
   height: 360px;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-right: 125px;
 }
 
@@ -1195,7 +1197,7 @@ nav {
   font-size: 24px;
   font-weight: 500;
   line-height: 36px;
-  margin-bottom: 92px;
+  margin-bottom: 24px;
 }
 
 @media (max-width: 992px) {
@@ -1211,5 +1213,6 @@ nav {
   padding: 10px;
   border-radius: 15px;
   color: #ffff;
+  margin-top: 92px;
 }
 /*# sourceMappingURL=all.css.map */

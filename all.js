@@ -198,8 +198,12 @@ selectGroup.addEventListener('click',function(e){
          let cityAttractionData = response.data;
          let str ="";
          cityAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.ScenicSpotName ==undefined){
-            return;
+          if(item.Picture.PictureUrl1 == undefined)
+          {  
+            item.Picture.PictureUrl1 = 'img/taiwantravelimg.png';
+            
+          }else if(item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '景點示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -241,8 +245,13 @@ selectGroupMobile.addEventListener('click',function(e){
          let cityAttractionData = response.data;
          let str ="";
          cityAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.ScenicSpotName ==undefined){
-            return;
+         
+          if(item.Picture.PictureUrl1 == undefined)
+          {  
+            item.Picture.PictureUrl1 = 'img/taiwantravelimg.png';
+            
+          }else if(item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '景點示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -308,8 +317,10 @@ selectGroup.addEventListener('click',function(e){
          let foodAttractionData = response.data;
          let str ="";
          foodAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.RestaurantName ==undefined){
-            return;
+          if(item.Picture.PictureUrl1 == undefined ){
+            item.Picture.PictureUrl1 = 'img/taiwannight.png';
+          }else if (item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '餐廳示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -350,8 +361,10 @@ selectGroupMobile.addEventListener('click',function(e){
          let foodAttractionData = response.data;
          let str ="";
          foodAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.RestaurantName ==undefined){
-            return;
+          if(item.Picture.PictureUrl1 == undefined ){
+            item.Picture.PictureUrl1 = 'img/taiwannight.png';
+          }else if (item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '餐廳示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -394,8 +407,12 @@ selectGroup.addEventListener('click',function(e){
          let hotelAttractionData = response.data;
          let str ="";
          hotelAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.HotelName ==undefined){
-            return;
+          if(item.Picture.PictureUrl1 == undefined)
+          {  
+            item.Picture.PictureUrl1 = 'img/hotelimg.png';
+            
+          }else if(item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '旅館示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -439,8 +456,12 @@ selectGroupMobile.addEventListener('click',function(e){
          let hotelAttractionData = response.data;
          let str ="";
          hotelAttractionData.forEach(function(item){
-          if(item.Picture.PictureUrl1 == undefined || item.City == undefined|| item.HotelName ==undefined){
-            return;
+          if(item.Picture.PictureUrl1 == undefined)
+          {  
+            item.Picture.PictureUrl1 = 'img/hotelimg.png';
+            
+          }else if(item.Picture.PictureDescription1 == undefined){
+            item.Picture.PictureDescription1 = '旅館示意圖';
           }
            str+=`<li>
            <div class="attractionList-item">
@@ -461,3 +482,99 @@ selectGroupMobile.addEventListener('click',function(e){
 
        }
 })
+
+
+//依據選取類別顯示資料(觀光活動)
+selectGroup.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'travelActivity'){
+         return;
+       }else{
+        
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/${city}?%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let travelActivityData = response.data;
+         let str ="";
+         travelActivityData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.Picture.PictureUrl2 == undefined || item.Picture.PictureUrl3 == undefined){
+            return;
+          }
+         
+           str+=`<li>
+           <div class="attractionList-item">
+           <a href="page.html?=${item.ActivityID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.ActivityName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
+
+       }
+})
+
+selectGroupMobile.addEventListener('click',function(e){
+  if(e.target.getAttribute("data-type") != 'travelActivity'){
+         return;
+       }else{
+        
+        let city = selectCity.value;
+        if (city == "選取地區"){
+          return;
+        }
+        axios.get(
+          `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity/${city}?%24format=JSON`,
+          {
+             headers: getAuthorizationHeader()
+          }
+        )
+        .then(function (response) {
+         let travelActivityData = response.data;
+         let str ="";
+         travelActivityData.forEach(function(item){
+          if(item.Picture.PictureUrl1 == undefined || item.Picture.PictureUrl2 == undefined || item.Picture.PictureUrl3 == undefined){
+            return;
+          }
+         
+           str+=`<li>
+           <div class="attractionList-item">
+           <a href="page.html?=${item.ActivityID}">
+             <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
+             <div class="attractionList-label">
+               <h3>${item.City}</h3>
+             </div>
+             <h4>${item.ActivityName}</h4>
+           </div>
+         </li>`
+         })
+         document.querySelector(".attractionList").innerHTML = str;
+        })
+        .catch(function (error) {
+         console.log(error);
+        });       
+
+       }
+})
+
+
+
+
+
+
+
+
