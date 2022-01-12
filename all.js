@@ -159,10 +159,9 @@ const searchTxt = document.querySelector(".searchTxt");
 const searchSend = document.querySelector('.searchSend');
 
 searchSend.addEventListener('click' ,function(e){
-  const keyWord = searchTxt.value;
+  const keyword = searchTxt.value;
   window.location.assign("https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html");
-  console.log('yes');
-  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyWord}')&%24format=JSON`,
+  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyword}')&%24format=JSON`,
   {
     headers: getAuthorizationHeader()
   }).then(function(response){
