@@ -34,14 +34,14 @@
           <a href="#"><i class="fas fa-globe"></i></a>
         </div>
         <div class="nav-searchBar d-flex">
-          <input type="text" placeholder="你想去哪裡？台南景點" />
+          <input type="text" class="searchTxt" placeholder="你想去哪裡？台南?" />
           <select class="nav-selectArea">
-            <option>全部景點</option>
-            <option>品味美食</option>
-            <option>質感住宿</option>
-            <option>觀光活動</option>
+            <option value="ScenicSpot">全部景點</option>
+            <option value="Restaurant">品味美食</option>
+            <option value="Hotel">質感住宿</option>
+            <option value="Activity">觀光活動</option>
           </select>
-          <button><a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html"><i class="fas fa-search py-7 px-25"></i></a></button>
+          <button type="button" class="send"><a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html"><i class="fas fa-search py-7 px-25"></i></a></button>
         </div>
         <div class="nav-links d-flex text-center">
           <a href="#" class="ps-35 fz-12"
@@ -52,11 +52,14 @@
           >
         </div>
         <div class="nav-mobile-searchBar">
+          <div class="d-flex">
           <input
             type="text"
-            class="rounded-2 border-0"
-            placeholder="你想去哪裡？台南景點"
+            class="txt border-0"
+            placeholder="你想去哪裡？台南?"
           />
+          <button type="button" class="send"><a href="#"><i class="fas fa-search"></i></a></button>
+        </div>
         </div>
       </nav>
     </div>
@@ -64,22 +67,22 @@
     <div class="swiper mySwiper latestInfo">
       <div class="swiper-wrapper latestInfo-wrapper">
         <div class="swiper-slide latestInfo-slide">
-          <a href="#" class="latestInfo-item rounded-1"
+          <a href="#Info" class="latestInfo-item rounded-1"
             ><i class="fas fa-exclamation-triangle"></i>活動公告詳請 點擊官網</a
           >
         </div>
         <div class="swiper-slide latestInfo-slide">
-          <a href="#" class="latestInfo-item rounded-1"
+          <a href="#Info" class="latestInfo-item rounded-1"
             ><i class="fas fa-exclamation-triangle"></i>卡利夢梅之宴 暫停辦理</a
           >
         </div>
         <div class="swiper-slide latestInfo-slide">
-          <a href="#" class="latestInfo-item rounded-1"
+          <a href="#Info" class="latestInfo-item rounded-1"
             ><i class="fas fa-exclamation-triangle"></i>三仙台迎曙光 取消活動</a
           >
         </div>
         <div class="swiper-slide latestInfo-slide">
-          <a href="#" class="latestInfo-item rounded-1"
+          <a href="#Info" class="latestInfo-item rounded-1"
             ><i class="fas fa-exclamation-triangle"></i>嘉義高跟鞋教堂 維修中</a
           >
         </div>
@@ -210,7 +213,7 @@
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <button type="button" class="btn">
+        <button type="button" class="btn" href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html">
           <a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html">
           了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i></a>
         </button>
@@ -280,12 +283,13 @@
       </div>
       <div class="d-flex justify-content-center">
         <button type="button" class="btn">
-          了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i>
+          <a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html">
+            了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i></a>
         </button>
       </div>
     </div>
     <!--活動告示-->
-    <div class="activityInfo container">
+    <div class="activityInfo container" id="Info">
       <h3 class="text-center">〔 活動告示 〕</h3>
       <div class="activityInfo-item mb-20">
         <p class="date">2021.10.29</p>
@@ -322,7 +326,8 @@
       </div>
       <div class="d-flex justify-content-center">
         <button type="button" class="btn">
-          了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i>
+          <a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html">
+            了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i></a>
         </button>
       </div>
     </div>
@@ -339,7 +344,8 @@
         </div>
         <div class="d-flex justify-content-center">
           <button type="button" class="btn">
-            了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i>
+            <a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html">
+              了解更多詳情<i class="fas fa-arrow-right btn-IconPadding"></i></a>
           </button>
         </div>
       </div>

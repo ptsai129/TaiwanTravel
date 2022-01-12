@@ -21,14 +21,14 @@
           <a href="#"><i class="fas fa-globe"></i></a>
         </div>
         <div class="nav-searchBar d-flex">
-          <input type="text" placeholder="你想去哪裡？台南景點" />
+          <input type="text" class="searchTxt" placeholder="你想去哪裡？台南景點" />
           <select class="nav-selectArea">
-            <option>全部景點</option>
-            <option>品味美食</option>
-            <option>質感住宿</option>
-            <option>觀光活動</option>
-          </select>
-          <button><a href="https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html"><i class="fas fa-search py-7 px-25"></i></a></button>
+            <option value="ScenicSpot">全部景點</option>
+            <option value="Restaurant">品味美食</option>
+            <option value="Hotel">質感住宿</option>
+            <option value="Activity">觀光活動</option>
+          </select>  
+          <button type="button" class="send"><a href="#"><i class="fas fa-search py-7 px-25"></i></a></button>
         </div>
         <div class="nav-links d-flex text-center">
           <a href="#" class="ps-35 fz-12"
@@ -39,11 +39,8 @@
           >
         </div>
         <div class="nav-mobile-searchBar">
-          <input
-            type="text"
-            class="rounded-2 border-0"
-            placeholder="你想去哪裡？台南景點"
-          />
+          <input type="text"class="txt border-0" placeholder="你想去哪裡？台南景點"/>
+          <button type="button"  class="send"><a href="#"><i class="fas fa-search"></i></a></button>
         </div>
       </nav>
     </div>
@@ -196,6 +193,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="all.js"></script>
+    <script src="attraction.js"></script>
   </body>
 </html>

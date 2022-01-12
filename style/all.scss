@@ -95,9 +95,23 @@ nav{
     }
    
     input{
-         padding:8px 50px;
+         padding:4px 16px;
          width:100%;
          text-align: center;
+         border-top-left-radius: 20px; 
+         border-bottom-left-radius:20px;
+    }
+    button{
+        background-color:$success;
+        border-top-right-radius: 20px; 
+        border-bottom-right-radius:20px;
+        border:1px;
+        padding:4px 16px;
+        
+        a{
+            color: $light;
+            font-size: 20px;
+        }
     }
 
 }
