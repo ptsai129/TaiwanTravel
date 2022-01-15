@@ -29,16 +29,10 @@
         <div class="nav-mobile-links">
           <a href="#"><i class="fas fa-globe"></i></a>
         </div>
-        <div class="nav-searchBar d-flex">
-          <input type="text" placeholder="你想去哪裡？台南景點" />
-          <select class="nav-selectArea">
-            <option>全部景點</option>
-              <option>品味美食</option>
-              <option>質感住宿</option>
-              <option>觀光活動</option>
-          </select>
-          <button><i class="fas fa-search py-7 px-25"></i></button>
-        </div>
+          <form action="exploreAttraction.html" method="GET" class="nav-searchBar d-flex">
+            <input type="text" id="thistext" name="thistext"  placeholder="你想去哪裡？台北? 高雄?" />
+            <button type="submit" class="send"><a href="#"><i class="fas fa-search"></i></a></button>
+           </form>
         <div class="nav-links d-flex text-center">
           <a href="#" class="ps-35 fz-12"
             ><i class="fab fa-facebook fz-30"></i> <br />Facebook</a

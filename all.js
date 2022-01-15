@@ -118,72 +118,18 @@ function getAuthorizationHeader() {
      return { 'Authorization': Authorization, 'X-Date': GMTString }; 
   }
 
-//關鍵字搜尋(手機版)
 
-const txt = document.querySelector(".txt");
-const send = document.querySelector('.send');
-send.addEventListener('click' ,function(e){
-  const keyWord = txt.value;
-  window.location.assign("https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html");
-  console.log('yes');
-  //const attractionList =  document.querySelector(".attractionList");
-  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyWord}')&%24format=JSON`,
-  {
-    headers: getAuthorizationHeader()
-  }).then(function(response){
-    let searchData = response.data;
-    let str="";
-    searchData.forEach(function(item){
-      if(item.Picture.PictureUrl1 == undefined   || item.Class1 == undefined|| item.ScenicSpotName ==undefined){
-        return;
-      }
-       str+=`<li>
-       <div class="attractionList-item">
-        <a href="page.html?=${item.ScenicSpotID}">
-         <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
-         <div class="attractionList-label">
-           <h3>${item.Class1}</h3>
-         </div>
-         <h4>${item.ScenicSpotName}</h4>
-       </div>
-     </li>`
-     })
-     attractionList.innerHTML = str;
-  }).catch(function(error){
-    console.log(error);
-  });
-})
+//利用表單將搜尋的內容新增到網址上 
+//參考https://www.quora.com/How-do-I-pass-value-from-javascript-to-url/answer/Dipti-107?ch=10&oid=97952801&share=fc378e87&target_type=answer
+function processForm() 
+{ 
+var parameters = location.search.substring(1).split("&"); 
+var temp = parameters[0].split("="); 
+x = decodeURI(String(temp[1]));
+  } 
 
-//關鍵字搜尋(桌機平板)
-const searchTxt = document.querySelector(".searchTxt");
-const searchSend = document.querySelector('.searchSend');
 
-searchSend.addEventListener('click' ,function(e){
-  const keyword = searchTxt.value;
-  window.location.assign("https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html");
-  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyword}')&%24format=JSON`,
-  {
-    headers: getAuthorizationHeader()
-  }).then(function(response){
-    let searchData = response.data;
-    let str="";
-    searchData.forEach(function(item){
-      if(item.Picture.PictureUrl1 == undefined   || item.Class1 == undefined|| item.ScenicSpotName ==undefined){
-        return;
-      }
-       str+=`<li>
-       <div class="attractionList-item">
-        <a href="page.html?=${item.ScenicSpotID}">
-         <img class="attractionList-img" src="${item.Picture.PictureUrl1}" alt="${item.Picture.PictureDescription1}"></a>
-         <div class="attractionList-label">
-           <h3>${item.Class1}</h3>
-         </div>
-         <h4>${item.ScenicSpotName}</h4>
-       </div>
-     </li>`
-     })
-     attractionList.innerHTML = str;
-  }).catch(function(error){
-    console.log(error);
-  });
+const send = document.querySelector(".send");
+send.addEventListener('click', function(e){
+  processForm(); 
 })

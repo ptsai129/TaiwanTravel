@@ -470,22 +470,19 @@ function getAuthorizationHeader() {
 
 
   
-//關鍵字搜尋(手機版)
+//關鍵字搜尋
 
-const txt = document.querySelector(".txt");
-const send = document.querySelector('.send');
+const keyword = location.href.split("=")[1];
 
-send.addEventListener('click' ,function(e){
-  const keyWord = txt.value;
-  window.location.assign("https://ptsai129.github.io/TaiwanTravel/exploreAttraction.html");
-  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyWord}')&%24format=JSON`,
+if(keyword!= undefined){
+  axios.get(`https://ptx.transportdata.tw/MOTC/v2/Tourism/ScenicSpot?%24filter=contains(ScenicSpotName,'${keyword}')&%24format=JSON`,
   {
     headers: getAuthorizationHeader()
   }).then(function(response){
     let searchData = response.data;
     let str="";
     searchData.forEach(function(item){
-      if(item.Picture.PictureUrl1 == undefined   || item.Class1 == undefined|| item.ScenicSpotName ==undefined){
+      if(item.Picture.PictureUrl1 == undefined   || item.Class1 == undefined|| item.ScenicSpotName ==undefined || item.Picture == undefined){
         return;
       }
        str+=`<li>
@@ -503,4 +500,6 @@ send.addEventListener('click' ,function(e){
   }).catch(function(error){
     console.log(error);
   });
-})
+
+}
+  
