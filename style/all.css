@@ -540,6 +540,10 @@ nav {
   margin-bottom: 92px;
 }
 
+.btn:hover {
+  background-color: #FF8800;
+}
+
 .btn a {
   color: #ffff;
 }

@@ -322,6 +322,9 @@ nav{
     padding:23px 26px 23px 137px;
     margin-top: 38px;
     margin-bottom: 92px;
+    &:hover{
+    background-color: $secondary;
+    }
     a{
         color:$light;
     }
@@ -719,8 +722,7 @@ nav{
     }
     &:hover{
             background-color:$secondary;
-            font-weight: 700;
-           
+            font-weight: 700;   
     }
 
     @include pad{

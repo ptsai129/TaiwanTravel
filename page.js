@@ -120,9 +120,6 @@ function getActivityContent(){
 }
 
 
-
-
-
 //Axios headers
 function getAuthorizationHeader() {
     //  填入自己 ID、KEY 開始

@@ -4,17 +4,22 @@
         // Optional parameters
         direction: 'horizontal',
         loop: true,
-    
+        autoplay: {
+          delay: 5000,
+        }
       });
   //公告swiper
       var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1.5,
-            spaceBetween: 5,
+            spaceBetween: 4,
+            autoplay: {
+              delay: 3000,
+            },
             breakpoints:{
                  // when window width is >= 320px
         320: {
-          slidesPerView: 1.5,
-          spaceBetween: 10
+          slidesPerView: 1.8,
+          spaceBetween: 5
         },
               //when window width is >576px
               576: {
@@ -122,8 +127,7 @@ function getAuthorizationHeader() {
 
 //利用表單將搜尋的內容新增到網址上 
 //參考https://www.quora.com/How-do-I-pass-value-from-javascript-to-url/answer/Dipti-107?ch=10&oid=97952801&share=fc378e87&target_type=answer
-function processForm() 
-{ 
+function processForm() { 
 var parameters = location.search.substring(1).split("&"); 
 var temp = parameters[0].split("="); 
 x = decodeURI(String(temp[1]));
