@@ -102,7 +102,8 @@ const contributeSwiper = new Swiper(".contributeSwiper", {
 });
 
 
-
+//aos啟用
+AOS.init();
 //Axios headers
 function getAuthorizationHeader() {
   //  填入自己 ID、KEY 開始

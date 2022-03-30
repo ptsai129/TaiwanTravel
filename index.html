@@ -18,6 +18,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style/all.css" />
     <title>Taiwan Go</title>
   </head>
@@ -116,7 +117,9 @@
         兩大城市 教你拍起 EMO 圖！
       </p>
       <div class="packageTour-items d-flex justify-content-center flex-wrap">
-        <div class="packageTour-Kaohsiung d-flex flex-column">
+        <div class="packageTour-Kaohsiung d-flex flex-column" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
           <img
             class="kaohsiungTrip"
             src="./img/trip-kaohsiung.png"
@@ -129,7 +132,9 @@
             ></a>
           </div>
         </div>
-        <div class="packageTour-Taipei d-flex flex-column">
+        <div class="packageTour-Taipei d-flex flex-column" data-aos="flip-right"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
           <img
             class="taipeiTrip"
             src="./img/trip-taipei.png"
@@ -286,7 +291,8 @@
     <!--活動告示-->
     <div class="activityInfo container" id="Info">
       <h3 class="text-center">〔 活動告示 〕</h3>
-      <div class="activityInfo-item mb-20">
+      <div class="activityInfo-item mb-20" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
         <p class="date">2021.10.29</p>
         <div class="activityLabel bg-secondary">
           <p>疫情說明</p>
@@ -295,7 +301,8 @@
           <p>【 二級警戒延長至 11/15 】五大口罩鬆綁場所一次看！</p>
         </div>
       </div>
-      <div class="activityInfo-item mb-20">
+      <div class="activityInfo-item mb-20" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
         <p class="date">2021.11.03</p>
         <div class="activityLabel bg-purple">
           <p>台北展覽</p>
@@ -307,7 +314,8 @@
           </p>
         </div>
       </div>
-      <div class="activityInfo-item mb-20">
+      <div class="activityInfo-item mb-20" data-aos="fade-up"
+      data-aos-anchor-placement="top-bottom">
         <p class="date">2021.11.03</p>
         <div class="activityLabel bg-primary">
           <p>暫停辦理</p>
@@ -327,7 +335,8 @@
       </div>
     </div>
     <!--募集-->
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center"  data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">
       <div class="recruitment bg-primary">
         <h3 class="text-center">募集</h3>
         <p class="text-center recruitment-subtitle">歡迎投稿 讓台灣更美好</p>
@@ -378,6 +387,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="all.js"></script>
   </body>
 </html>
